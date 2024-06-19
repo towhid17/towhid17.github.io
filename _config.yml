@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Towhidul Islam"
+title                    : "Towhid"
 title_separator          : "-"
-name                     : &name "Towhidul Islam"
+name                     : &name "Towhid"
 description              : &description "personal description"
 url                      : https://towhid17.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Towhidul Islam"
-  pronouns         : "He/him"  
-  bio              : "Short biography for the left-hand sidebar"
+  # pronouns         : "He/him"  
+  bio              : "Associate Software Engineer"
   location         : "Dhaka, Bangladesh"
-  employer         : "Red Brick University"
+  employer         : "Therap BD Ltd."
   uri              : # URL
   email            : "towhidulislam2608@gmail.com" 
 
