@@ -1,0 +1,33 @@
+@import './styles/variables.css';
+@import './styles/scrollbar.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[var(--gradient-start)];
+    background-image: radial-gradient(circle at center, var(--gradient-middle) 0%, var(--gradient-start) 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[var(--glass-bg)] backdrop-blur-lg border border-[var(--glass-border)]
+           shadow-lg rounded-2xl transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply border-white/15 shadow-xl;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-lg hover:bg-white/10 transition-colors;
+  }
+
+  .expanded-card {
+    @apply fixed inset-4 z-50 overflow-hidden transition-all duration-300 ease-in-out;
+  }
+}
