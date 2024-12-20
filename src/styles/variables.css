@@ -1,15 +1,17 @@
 @layer base {
   :root {
-    /* Existing variables */
+    /* Background gradient */
     --gradient-start: #1a1a2e;
     --gradient-middle: #2a2a4a;
     --gradient-end: #1a1a2e;
+    
+    /* Glass effect */
     --glass-bg: rgba(26, 26, 46, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-highlight: rgba(26, 26, 46, 0.85);
 
-    /* Scrollbar variables */
-    --scrollbar-track: rgba(26, 26, 46, 0.1);
+    /* Scrollbar */
+    --scrollbar-track: rgba(30, 30, 60, 0.5);
     --scrollbar-thumb: rgba(147, 51, 234, 0.3);
     --scrollbar-thumb-hover: rgba(147, 51, 234, 0.5);
   }

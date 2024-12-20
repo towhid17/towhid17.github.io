@@ -10,7 +10,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-2 left-20 right-20 z-50 transition-all duration-300 ${
+      className={`fixed max-w-6xl top-2 z-50 left-4 right-4 mx-auto w-full md:w-full transition-all duration-300 ${
         isScrolled
           ? 'glass-card backdrop-blur-lg shadow-lg'
           : 'glass-card'

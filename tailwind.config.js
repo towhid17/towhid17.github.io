@@ -28,4 +28,11 @@ export default {
     },
   },
   plugins: [],
+
+  // Add the utilities layer
+  layers: {
+    utilities: {
+      'utilities': {},
+    },
+  },
 };

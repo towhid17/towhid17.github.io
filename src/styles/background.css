@@ -1,0 +1,14 @@
+@layer base {
+  body {
+    @apply min-h-screen;
+    background-color: var(--gradient-start);
+    background-image: 
+      radial-gradient(
+        circle at center,
+        var(--gradient-middle) 0%,
+        var(--gradient-start) 100%
+      );
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}

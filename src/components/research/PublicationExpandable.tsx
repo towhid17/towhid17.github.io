@@ -6,6 +6,7 @@ import { PublicationEntry } from './PublicationEntry';
 
 const publications: Publication[] = [
   {
+    id: 'pub-1',
     title: 'Advanced Natural Language Processing Techniques',
     year: 2022,
     venue: 'Nature Machine Intelligence',
@@ -14,6 +15,7 @@ const publications: Publication[] = [
     paperUrl: '#'
   },
   {
+    id: 'pub-2',
     title: 'Deep Learning Applications in Healthcare',
     year: 2021,
     venue: 'ICML Conference Proceedings',
@@ -22,7 +24,8 @@ const publications: Publication[] = [
     paperUrl: '#'
   },
   {
-    title: 'Deep Learning Applications in Healthcare',
+    id: 'pub-3',
+    title: 'Transformer Models for Medical Image Analysis',
     year: 2021,
     venue: 'ICML Conference Proceedings',
     authors: ['Islam T', 'Chen X', 'Williams R'],
@@ -30,9 +33,10 @@ const publications: Publication[] = [
     paperUrl: '#'
   },
   {
-    title: 'Deep Learning Applications in Healthcare',
+    id: 'pub-4',
+    title: 'Attention Mechanisms in Computer Vision',
     year: 2021,
-    venue: 'ICML Conference Proceedings',
+    venue: 'ICCV Conference Proceedings',
     authors: ['Islam T', 'Chen X', 'Williams R'],
     pdfUrl: '#',
     paperUrl: '#'
@@ -44,11 +48,11 @@ export function PublicationExpandable() {
     <ExpandableCard icon={<Microscope className="w-6 h-6 text-purple-200" />} title="Publications">
       <NewsContainer>
         <div className="space-y-6 pr-4">
-            <div className="space-y-6">
-                {publications.map((pub) => (
-                <PublicationEntry key={`${pub.title}-${pub.year}`} publication={pub} />
-                ))}
-            </div>
+          <div className="space-y-6">
+            {publications.map((pub) => (
+              <PublicationEntry key={pub.id} publication={pub} />
+            ))}
+          </div>
         </div>
       </NewsContainer>
     </ExpandableCard>
