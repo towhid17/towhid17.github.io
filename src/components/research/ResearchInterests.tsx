@@ -1,9 +1,10 @@
 
 const interests = [
-  'Natural Language Processing',
-  'Computer Vision',
-  'Reinforcement Learning',
-  'Neural Networks Architecture',
+'Distributed Systems',
+'Network Security',
+'Machine-learning',
+'Edge Computing',
+'Ubuquitous computing and Digital Health'
 ];
 
 export function ResearchInterests() {

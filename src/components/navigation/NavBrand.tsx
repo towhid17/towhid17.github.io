@@ -4,7 +4,7 @@ export function NavBrand() {
       href="#" 
       className="text-xl font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
     >
-      Portfolio
+      Towhid
     </a>
   );
 }

@@ -1,9 +1,12 @@
 import { NavLink } from './NavLink';
 
 const navItems = [
-  { label: 'Bio', href: '#bio' },
+  { label: 'Bio', href: '#about-me' },
   { label: 'Education', href: '#education' },
-  { label: 'Research', href: '#research' },
+  { label: 'Research Interests', href: '#research-interests' },
+  { label: 'Work Experience', href: '#work-experience' },
+  // { label: 'Research Projects', href: '#research-projects' },
+  { label: 'Publications', href: '#publications' },
 ] as const;
 
 export function NavLinks() {

@@ -1,9 +1,10 @@
 import { LucideIcon } from 'lucide-react';
+import { ReactNode } from 'react';
 
 interface ContactItemProps {
   icon: LucideIcon;
   label: string;
-  value: string;
+  value: ReactNode;
 }
 
 export function ContactItem({ icon: Icon, label, value }: ContactItemProps) {

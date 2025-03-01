@@ -1,6 +1,6 @@
 import { CustomDoiIcon } from '../../components/icons/doi'
 import { FileText } from 'lucide-react';
-import { type Publication } from './types';
+import { type Publication } from '../../data/types';
 
 interface PublicationEntryProps {
   publication: Publication;

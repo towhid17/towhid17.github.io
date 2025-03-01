@@ -5,7 +5,7 @@ interface NewsContainerProps {
   maxHeight?: string;
 }
 
-export function NewsContainer({ children, maxHeight = '600px' }: NewsContainerProps) {
+export function NewsContainer({ children, maxHeight = '900px' }: NewsContainerProps) {
   return (
     <div 
       className="custom-scrollbar overflow-y-auto"

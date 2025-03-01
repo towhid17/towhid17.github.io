@@ -12,6 +12,10 @@ import { Section } from './components/layout/Section';
 import { PublicationExpandable } from './components/research/PublicationExpandable';
 import { GalleryGrid } from './components/gallery/GalleryGrid';
 import './styles/animations.css';
+import { WorkExperienceSection } from './components/work/WorkExperienceSection';
+import { ResearchProjectsSection } from './components/research/ResearchSection';
+import { EducationSection } from './components/education/EducationSection';
+import { AcademicProjectsSection } from './components/academicProjects/AcademicProjectsSection';
 
 function HomePage() {
   return (
@@ -23,32 +27,12 @@ function HomePage() {
         
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2 space-y-6">
-            <Section title="About Me"
+            <Section 
+              title="About Me"
               icon={<BookOpen className="w-6 h-6 text-purple-200" />}
               defaultExpanded
             >
               <BioCard />
-            </Section>
-
-            <Section 
-              icon={<GraduationCap className="w-6 h-6 text-purple-200" />} 
-              title="Education" 
-              defaultExpanded
-            >
-              <div className="space-y-4">
-                <EducationCard
-                  title="Ph.D. in Computer Science"
-                  institution="Stanford University"
-                  period="2018-2022"
-                  description="Thesis: 'Advanced Applications of Deep Learning in Natural Language Processing'"
-                />
-                <EducationCard
-                  title="M.S. in Computer Science"
-                  institution="MIT"
-                  period="2016-2018"
-                  description="Focus: Machine Learning and Artificial Intelligence"
-                />
-              </div>
             </Section>
 
             <Section 
@@ -59,12 +43,25 @@ function HomePage() {
               <ResearchInterests />
             </Section>
 
-            <PublicationExpandable />
           </div>
 
           <div className="space-y-6">
             <NewsCard />
           </div>
+
+          <div className="md:col-span-3 space-y-6">
+
+            <EducationSection />
+
+            <WorkExperienceSection />
+
+            {/* <ResearchProjectsSection /> */}
+
+            <PublicationExpandable />
+
+            <AcademicProjectsSection />
+          </div>
+
         </div>
       </main>
     </div>

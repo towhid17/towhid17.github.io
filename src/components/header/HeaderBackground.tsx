@@ -1,9 +1,21 @@
 import { useState, useEffect } from 'react';
 
 const backgroundImages = [
-  'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8',
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-  'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+  '/src/assets/cover/1.jpg',
+  '/src/assets/cover/2.jpg',
+  '/src/assets/cover/3.jpg',
+  '/src/assets/cover/4.jpg',
+  '/src/assets/cover/5.jpg',
+  '/src/assets/cover/6.jpg',
+  '/src/assets/cover/7.jpg',
+  '/src/assets/cover/8.jpg',
+  '/src/assets/cover/9.jpg',
+  '/src/assets/cover/10.jpg',
+  '/src/assets/cover/11.jpg',
+  '/src/assets/cover/12.jpg',
+  '/src/assets/cover/13.jpg',
+  '/src/assets/cover/14.jpg',
+  '/src/assets/cover/15.jpg',
 ] as const;
 
 export function HeaderBackground() {

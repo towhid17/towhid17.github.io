@@ -13,7 +13,7 @@ export function Section({ icon, title, children, defaultExpanded = false }: Sect
   const id = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
-    <div className="glass-card">
+    <div id={id} className="glass-card">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-left justify-between p-6"
@@ -37,7 +37,6 @@ export function Section({ icon, title, children, defaultExpanded = false }: Sect
         </span>
       </button>
       <div
-        id={id}
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
         }`}

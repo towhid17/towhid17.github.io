@@ -9,9 +9,11 @@ interface ExpandableCardProps {
 
 export function ExpandableCard({ icon, title, children }: ExpandableCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const id = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <div
+      id={id}
       className={`glass-card transition-all duration-300 ease-in-out ${
         isExpanded
           ? 'fixed inset-4 z-50 overflow-y-auto'
