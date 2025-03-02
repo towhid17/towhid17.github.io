@@ -12,7 +12,7 @@ export function EducationSection() {
     >
         <div className="space-y-4">
         <EducationCard
-            icon=<img src='/src/components/icons/BUET_LOGO.png' alt='BUET'/>
+            icon=<img src='/images/icon/BUET_LOGO.png' alt='BUET'/>
             title="BSc. in Computer Science and Engineering"
             institution="Bangladesh University of Engineering and Technology (BUET)"
             period="2018-2023"

@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
 const backgroundImages = [
-  '/src/assets/cover/1.jpg',
-  '/src/assets/cover/2.jpg',
-  '/src/assets/cover/3.jpg',
-  '/src/assets/cover/4.jpg',
-  '/src/assets/cover/5.jpg',
-  '/src/assets/cover/6.jpg',
-  '/src/assets/cover/7.jpg',
-  '/src/assets/cover/8.jpg',
-  '/src/assets/cover/9.jpg',
-  '/src/assets/cover/10.jpg',
-  '/src/assets/cover/11.jpg',
-  '/src/assets/cover/12.jpg',
-  '/src/assets/cover/13.jpg',
-  '/src/assets/cover/14.jpg',
-  '/src/assets/cover/15.jpg',
+  // '/src/images/cover/1.jpg',
+  '/images/cover/2.jpg',
+  // '/src/images/cover/3.jpg',
+  // '/src/images/cover/4.jpg',
+  // '/src/images/cover/5.jpg',
+  // '/src/images/cover/6.jpg',
+  '/images/cover/7.jpg',
+  // '/src/images/cover/8.jpg',
+  '/images/cover/9.jpg',
+  // '/src/images/cover/10.jpg',
+  // '/src/images/cover/11.jpg',
+  // '/src/images/cover/12.jpg',
+  // '/src/images/cover/13.jpg',
+  // '/src/images/cover/14.jpg',
+  '/images/cover/15.jpg',
 ] as const;
 
 export function HeaderBackground() {
@@ -40,7 +40,7 @@ export function HeaderBackground() {
     <div className="absolute inset-0 overflow-hidden">
       {/* Current Image */}
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
           isTransitioning ? 'opacity-0' : 'opacity-70'
         }`}
         style={{
@@ -53,7 +53,7 @@ export function HeaderBackground() {
 
       {/* Next Image (Preloaded) */}
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
           isTransitioning ? 'opacity-70' : 'opacity-0'
         }`}
         style={{

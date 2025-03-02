@@ -13,7 +13,7 @@ export function Header() {
         <div className="absolute bottom-0 left-0 right-0 gap-6 items-center md:items-end">
           <div className="flex flex-col md:flex-row bottom-0 md:items-end gap-6 p-6">
             <ProfileImage
-              src="/src/assets/profile/20240304_235408.jpg"
+              src="/images/profile/profile.jpg"
               alt="Towhidul Islam"
             />
           

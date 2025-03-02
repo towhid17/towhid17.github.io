@@ -25,8 +25,8 @@ function HomePage() {
       <main className="max-w-6xl mx-auto px-4 py-8 space-y-6">
         <Header />
         
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 space-y-6">
+        <div className="grid md:grid-cols-6 gap-6">
+          <div className="md:col-span-4 space-y-6">
             <Section 
               title="About Me"
               icon={<BookOpen className="w-6 h-6 text-purple-200" />}
@@ -45,11 +45,11 @@ function HomePage() {
 
           </div>
 
-          <div className="space-y-6">
+          <div className="md:col-span-2 space-y-6">
             <NewsCard />
           </div>
 
-          <div className="md:col-span-3 space-y-6">
+          <div className="md:col-span-6 space-y-6">
 
             <EducationSection />
 
