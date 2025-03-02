@@ -16,13 +16,25 @@ import { WorkExperienceSection } from './components/work/WorkExperienceSection';
 import { ResearchProjectsSection } from './components/research/ResearchSection';
 import { EducationSection } from './components/education/EducationSection';
 import { AcademicProjectsSection } from './components/academicProjects/AcademicProjectsSection';
+import { useState, useEffect } from 'react';
 
 function HomePage() {
+  const [contentLoaded, setContentLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Mark content as loaded after a short delay
+    const timer = setTimeout(() => {
+      setContentLoaded(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen text-white/90">
+    <div className={`min-h-screen text-white/90 ${contentLoaded ? 'content-reveal' : ''}`}>
       <Navbar />
       
-      <main className="max-w-6xl mx-auto px-4 py-8 space-y-6">
+      <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">
         <Header />
         
         <div className="grid md:grid-cols-6 gap-6">
@@ -60,6 +72,7 @@ function HomePage() {
             <PublicationExpandable />
 
             <AcademicProjectsSection />
+            
           </div>
 
         </div>
