@@ -31,7 +31,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={`min-h-screen text-white/90 ${contentLoaded ? 'content-reveal' : ''}`}>
+    <div className={`text-white/90 ${contentLoaded ? 'content-reveal' : ''}`}>
       <Navbar />
       
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">

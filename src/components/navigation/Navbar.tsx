@@ -1,5 +1,4 @@
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { ThemeToggle } from '../ThemeToggle';
 import { NavBrand } from './NavBrand';
 import { NavLinks } from './NavLinks';
 import { MobileMenu } from './MobileMenu';
@@ -10,7 +9,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed max-w-7xl top-2 z-50 left-4 right-4 mx-auto w-full md:w-full transition-all duration-300 ${
+      className={`fixed max-w-7xl top-2 z-5000 left-4 right-4 mx-auto w-full md:w-full transition-all duration-300 ${
         isScrolled
           ? 'glass-card backdrop-blur-lg shadow-lg'
           : 'glass-card'
@@ -23,7 +22,7 @@ export function Navbar() {
         </div>
         
         <div className="flex items-center gap-4">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <MobileMenu />
         </div>
       </NavContainer>

@@ -1,6 +1,17 @@
 import { CustomDoiIcon } from '../../components/icons/doi'
 import { FileText } from 'lucide-react';
 import { type Publication } from '../../data/types';
+import { PdfViewerModal } from '../pdfViewer/PdfViewerModal';
+import { useState } from 'react';
+
+function getDriveDownloadLink(driveUrl: string): string {
+  const match = driveUrl.match(/\/d\/([^/]+)\//);
+  if (match && match[1]) {
+    return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+  }
+  return driveUrl; 
+}
+
 
 interface PublicationEntryProps {
   publication: Publication;
@@ -8,6 +19,7 @@ interface PublicationEntryProps {
 
 export function PublicationEntry({ publication }: PublicationEntryProps) {
   const { title, year, venue, authors, pdfUrl, paperUrl } = publication;
+  const [showPdf, setShowPdf] = useState(false);
 
   return (
     <div className="group p-4 relative space-y-1 border-b border-white/10 last:border-0 pb-6 last:pb-0 hover:drop-shadow-lg transition-shadow">
@@ -40,6 +52,16 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
             <FileText className="h-10 w-10" />
           </a>
         )}
+        {/* {pdfUrl && (
+          <button
+            onClick={() => setShowPdf(true)}
+            className="bg-purple-600 text-white px-4 py-2 rounded-md"
+          >
+            <FileText className="h-10 w-10" />
+        </button>)
+        }
+        {pdfUrl && (showPdf && <PdfViewerModal pdfUrl={pdfUrl} onClose={() => setShowPdf(false)} />)} */}
+          
         {paperUrl && (
           <a
             href={paperUrl}

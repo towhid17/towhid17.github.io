@@ -7,6 +7,7 @@ const navItems = [
   { label: 'Work Experience', href: '#work-experience' },
   // { label: 'Research Projects', href: '#research-projects' },
   { label: 'Publications', href: '#publications' },
+  { label: 'Academic Projects', href: '#academic-projects' },
 ] as const;
 
 export function NavLinks() {

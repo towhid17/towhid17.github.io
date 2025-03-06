@@ -1,4 +1,3 @@
-import { GraduationCap } from 'lucide-react';
 import React from 'react';
 
 interface EducationCardProps {

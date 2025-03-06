@@ -1,21 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const backgroundImages = [
-  // '/src/images/cover/1.jpg',
-  '/images/cover/2.jpg',
-  // '/src/images/cover/3.jpg',
-  // '/src/images/cover/4.jpg',
-  // '/src/images/cover/5.jpg',
-  // '/src/images/cover/6.jpg',
-  '/images/cover/7.jpg',
-  // '/src/images/cover/8.jpg',
-  '/images/cover/9.jpg',
-  // '/src/images/cover/10.jpg',
-  // '/src/images/cover/11.jpg',
-  // '/src/images/cover/12.jpg',
-  // '/src/images/cover/13.jpg',
-  // '/src/images/cover/14.jpg',
-  '/images/cover/15.jpg',
+  "/images/cover/2.jpg",
+  "/images/cover/7.jpg",
 ] as const;
 
 export function HeaderBackground() {
@@ -26,12 +13,14 @@ export function HeaderBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
+
       setTimeout(() => {
         setCurrentImageIndex(nextImageIndex);
         setNextImageIndex((nextImageIndex + 1) % backgroundImages.length);
         setIsTransitioning(false);
-      }, 500);
-    }, 5000);
+      }, 2000); // Longer fade-out transition
+
+    }, 7000); // Wait before switching (7s)
 
     return () => clearInterval(interval);
   }, [nextImageIndex]);
@@ -40,27 +29,29 @@ export function HeaderBackground() {
     <div className="absolute inset-0 overflow-hidden">
       {/* Current Image */}
       <div
-        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-          isTransitioning ? 'opacity-0' : 'opacity-70'
+        className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+          isTransitioning ? "opacity-0" : "opacity-70"
         }`}
         style={{
           backgroundImage: `url(${backgroundImages[currentImageIndex]}?auto=format&fit=crop&w=1920&q=80)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transform: 'scale(1.1)',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          transform: "scale(1.1)",
+          transition: "transform 7s ease-in-out", // Smooth zoom effect
         }}
       />
 
-      {/* Next Image (Preloaded) */}
+      {/* Next Image (Preloaded & Fading In) */}
       <div
-        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-          isTransitioning ? 'opacity-70' : 'opacity-0'
+        className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+          isTransitioning ? "opacity-70" : "opacity-0"
         }`}
         style={{
           backgroundImage: `url(${backgroundImages[nextImageIndex]}?auto=format&fit=crop&w=1920&q=80)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transform: 'scale(1.1)',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          transform: "scale(1.1)",
+          transition: "transform 7s ease-in-out",
         }}
       />
 

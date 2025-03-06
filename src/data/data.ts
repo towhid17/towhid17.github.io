@@ -39,6 +39,7 @@ export const publications: Publication[] = [
     venue: ' IEEE/ACM 17th International Conference on Utility and Cloud Computing (UCC)',
     authors: ['Towhidul Islam', 'Asif Ahmed Utsa', 'Rezwana Reaz'],
     pdfUrl: 'https://drive.google.com/file/d/1RkoQ47489mlfZtqsF64M8zo_FDLSgj0E/view?usp=sharing',
+    // pdfUrl: '/images/icon/test.pdf',
     paperUrl: '#'
   },
 ];
