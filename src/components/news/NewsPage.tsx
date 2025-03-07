@@ -36,7 +36,7 @@ export function NewsPage() {
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
     setCurrentPage(1);
-    window.history.pushState({}, '', `/news${category !== 'All' ? '/' + category.toLowerCase() : ''}`);
+    window.history.pushState({}, '', `/resource${category !== 'All' ? '/' + category.toLowerCase() : ''}`);
   };
   
   // Handle page change
@@ -89,7 +89,7 @@ export function NewsPage() {
               <button
                 onClick={() => {
                   setSelectedNews(null);
-                  window.history.pushState({}, '', `/news${activeCategory !== 'All' ? '/' + activeCategory.toLowerCase() : ''}`);
+                  window.history.pushState({}, '', `/resource${activeCategory !== 'All' ? '/' + activeCategory.toLowerCase() : ''}`);
                 }}
                 className="absolute top-4 left-4 p-2 rounded-full bg-black/30 hover:bg-black/50 transition-colors"
                 aria-label="Back to news list"
@@ -114,10 +114,10 @@ export function NewsPage() {
                 </div>
               </div>
               
-              <h2 className="text-2xl font-bold mb-6">{selectedNews.title}</h2>
+              <h2 className="text-white/75 text-2xl font-bold mb-6">{selectedNews.title}</h2>
               
               <div 
-                className="prose prose-invert prose-purple max-w-none"
+                className="prose prose-invert prose-purple max-w-none text-white/90"
                 dangerouslySetInnerHTML={{ __html: selectedNews.content }}
               />
               
@@ -176,9 +176,9 @@ export function NewsPage() {
             />
             
             {/* Featured News */}
-            {currentPage === 1 && activeCategory === 'All' && (
+            {/* {currentPage === 1 && activeCategory === 'All' && (
               <FeaturedNews items={newsItems} />
-            )}
+            )} */}
             
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -187,7 +187,7 @@ export function NewsPage() {
                   key={item.id}
                   onClick={() => {
                     setSelectedNews(item);
-                    window.history.pushState({}, '', `/news?id=${item.id}`);
+                    window.history.pushState({}, '', `/resource?id=${item.id}`);
                   }}
                   className="cursor-pointer"
                 >

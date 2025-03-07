@@ -88,8 +88,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery" element={<GalleryGrid />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/news/:category" element={<NewsPage />} />
+        <Route path="/resource" element={<NewsPage />} />
+        <Route path="/resource/:category" element={<NewsPage />} />
       </Routes>
     </Router>
   );
