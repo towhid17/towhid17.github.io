@@ -17,6 +17,7 @@ import { ResearchProjectsSection } from './components/research/ResearchSection';
 import { EducationSection } from './components/education/EducationSection';
 import { AcademicProjectsSection } from './components/academicProjects/AcademicProjectsSection';
 import { useState, useEffect } from 'react';
+import { NewsPage } from './components/news/NewsPage';
 
 function HomePage() {
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -87,6 +88,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery" element={<GalleryGrid />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/news/:category" element={<NewsPage />} />
       </Routes>
     </Router>
   );
