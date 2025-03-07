@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { GraduationCap } from 'lucide-react';
 import { Microscope } from 'lucide-react';
@@ -87,9 +87,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/gallery" element={<GalleryGrid />} />
-        <Route path="/resource" element={<NewsPage />} />
-        <Route path="/resource/:category" element={<NewsPage />} />
+        <Route path="gallery" element={<GalleryGrid />} />
+        <Route path="resource" element={<NewsPage />} />
+        <Route path="resource/:category" element={<NewsPage />} />
       </Routes>
     </Router>
   );
