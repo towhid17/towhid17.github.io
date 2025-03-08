@@ -33,7 +33,7 @@ export function ImageViewer({ src, alt, onClose }: ImageViewerProps) {
         />
         <button
           onClick={onClose}
-          className="absolute -top-4 -right-4 p-2 bg-purple-600 hover:bg-purple-500 rounded-full text-white transition-colors duration-200"
+          className="absolute -top-4 -right-4 p-2 bg-purple-600 hover:bg-purple-500 rounded-full text-primary transition-colors duration-200"
           aria-label="Close image viewer"
         >
           <X className="w-6 h-6" />

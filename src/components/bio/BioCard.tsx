@@ -3,7 +3,7 @@
 export function BioCard() {
   return (
     <div className="space-y-4">
-      <p className="text-white/75 leading-relaxed text-lg">
+      <p className="text-secondary leading-relaxed text-lg">
         I'm Towhid (he/him), a fresh graduate from the <a href="https://cse.buet.ac.bd/">Department of CSE, BUET</a>. I am currently working as a software engineer at Therap BD Ltd., a US-based company, 
         and previously worked as a machine learning engineer at AIEdgeInside.
         <br/><br/>

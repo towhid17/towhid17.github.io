@@ -19,7 +19,7 @@ export function WorkExperienceCard({
     <div className="glass-card p-6">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-purple-500/20 rounded-lg">
-          <Briefcase className="w-6 h-6 text-purple-200" />
+          <Briefcase className="w-6 h-6 text-primary" />
         </div>
         <div>
           <h3 className="text-xl font-semibold text-primary">{title}</h3>
@@ -35,7 +35,7 @@ export function WorkExperienceCard({
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-200/90 text-sm"
+                className="px-3 py-1 rounded-lg bg-purple-500/10 text-secondary text-sm"
               >
                 {tech}
               </span>

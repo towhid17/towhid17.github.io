@@ -50,7 +50,7 @@ export function ProfileImage({ src, alt }: ProfileImageProps) {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-white text-3xl bg-purple-600 hover:bg-purple-500 rounded-full p-2 focus:outline-none"
+                className="absolute top-4 right-4 text-primary text-3xl bg-purple-600 hover:bg-purple-500 rounded-full p-2 focus:outline-none"
               >
                 &times;
               </button>

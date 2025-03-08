@@ -64,14 +64,14 @@ export function NewsPage() {
         <div className="glass-card px-6 py-8 rounded-b-lg">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-white/75 hover:text-purple-200 transition-colors"
+            className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
           
-          <h1 className="text-white/100 text-3xl font-bold mt-4 mb-2">Resources</h1>
-          <p className="text-white/70">Stay up to date with the latest research, publications, and events</p>
+          <h1 className="text-primary text-3xl font-bold mt-4 mb-2">Resources</h1>
+          <p className="text-primary">Stay up to date with the latest research, publications, and events</p>
         </div>
         
         {selectedNews ? (
@@ -101,23 +101,23 @@ export function NewsPage() {
             {/* Content */}
             <div className="p-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
-                <div className="flex items-center gap-2 text-white/60">
+                <div className="flex items-center gap-2 text-primary">
                   <Calendar className="w-4 h-4" />
                   {/* <time dateTime={selectedNews.date}>
                     {format(new Date(selectedNews.date), 'MMMM d, yyyy')}
                   </time> */}
                 </div>
                 
-                <div className="flex items-center gap-2 text-white/60">
+                <div className="flex items-center gap-2 text-primary">
                   <Tag className="w-4 h-4" />
                   <span>{selectedNews.category}</span>
                 </div>
               </div>
               
-              <h2 className="text-white/75 text-2xl font-bold mb-6">{selectedNews.title}</h2>
+              <h2 className="text-primary text-2xl font-bold mb-6">{selectedNews.title}</h2>
               
               <div 
-                className="prose prose-invert prose-purple max-w-none text-white/90"
+                className="prose prose-invert prose-purple max-w-none text-primary"
                 dangerouslySetInnerHTML={{ __html: selectedNews.content }}
               />
               

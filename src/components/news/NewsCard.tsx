@@ -51,17 +51,17 @@ export function NewsCard() {
               key={item.id} 
               className="group border-b border-white/10 last:border-0 pb-6 last:pb-0"
             >
-              <div className="flex items-center gap-2 text-sm text-white/50 mb-2">
+              <div className="flex items-center gap-2 text-sm text-secondary mb-2">
                 <CalendarDays className="w-4 h-4" />
                 <time>{item.date}</time>
               </div>
-              <h3 className="text-lg font-medium text-white/90 group-hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-medium text-primary group-hover:text-secondary transition-colors">
                 {item.title}
               </h3>
-              <p className="text-white/70 mt-2 mb-3">{item.description}</p>
+              <p className="text-secondary mt-2 mb-3">{item.description}</p>
               <a
                 href={item.link}
-                className="inline-flex items-center text-purple-300 hover:text-purple-200 text-sm"
+                className="inline-flex items-center text-accent hover:text-primary text-sm"
               >
                 Read More →
               </a>

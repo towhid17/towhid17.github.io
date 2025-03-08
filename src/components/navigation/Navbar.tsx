@@ -36,6 +36,7 @@ import { NavBrand } from './NavBrand';
 import { NavLinks } from './NavLinks';
 import { MobileMenu } from './MobileMenu';
 import { NavContainer } from './NavContainer';
+import { ThemeToggle } from '../ThemeToggle';
 
 export function Navbar() {
   const isScrolled = useScrollPosition();
@@ -57,7 +58,7 @@ export function Navbar() {
             </div>
             
             <div className="flex items-center gap-4">
-              {/* <ThemeToggle /> */}
+              <ThemeToggle />
               <MobileMenu />
             </div>
           </NavContainer>

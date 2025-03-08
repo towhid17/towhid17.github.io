@@ -109,6 +109,7 @@ export function HeaderBackground() {
         backgroundPosition: "center",
         filter: "blur(20px)",
         zIndex: -1, // Ensure it stays behind all content
+        transition: "opacity 3s ease-in-out",
       }}
     />
   );

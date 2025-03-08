@@ -15,7 +15,7 @@ export function CategoryFilter({ categories, activeCategory, onCategoryChange }:
           onClick={() => onCategoryChange(category)}
           className={`px-4 py-2 rounded-full transition-colors ${
             activeCategory === category
-              ? 'bg-purple-600 text-white'
+              ? 'bg-purple-600 text-primary'
               : 'bg-white/10 hover:bg-white/20'
           }`}
         >

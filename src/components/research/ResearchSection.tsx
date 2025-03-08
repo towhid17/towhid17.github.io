@@ -6,7 +6,7 @@ import { researchProjects } from '../../data/data';
 export function ResearchProjectsSection() {
   return (
     <Section 
-      icon={<Flask className="w-6 h-6 text-purple-200" />} 
+      icon={<Flask className="w-6 h-6 text-primary" />} 
       title="Research Projects" 
       defaultExpanded
     >

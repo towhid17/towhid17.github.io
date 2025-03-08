@@ -74,7 +74,7 @@ export function PdfViewerModal({ pdfUrl, onClose }: PdfViewerModalProps) {
             <button
               onClick={() => setPageNumber((prev) => Math.max(prev - 1, 1))}
               disabled={pageNumber <= 1}
-              className="bg-purple-600 text-white px-3 py-1 rounded-md disabled:opacity-50"
+              className="bg-purple-600 text-primary px-3 py-1 rounded-md disabled:opacity-50"
             >
               ◀ Prev
             </button>
@@ -84,7 +84,7 @@ export function PdfViewerModal({ pdfUrl, onClose }: PdfViewerModalProps) {
             <button
               onClick={() => setPageNumber((prev) => Math.min(prev + 1, numPages || 1))}
               disabled={pageNumber >= (numPages || 1)}
-              className="bg-purple-600 text-white px-3 py-1 rounded-md disabled:opacity-50"
+              className="bg-purple-600 text-primary px-3 py-1 rounded-md disabled:opacity-50"
             >
               Next ▶
             </button>
@@ -94,14 +94,14 @@ export function PdfViewerModal({ pdfUrl, onClose }: PdfViewerModalProps) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setScale((prev) => Math.max(prev - 0.2, 0.5))}
-              className="bg-gray-500 text-white px-3 py-1 rounded-md"
+              className="bg-gray-500 text-primary px-3 py-1 rounded-md"
             >
               ➖ Zoom Out
             </button>
             <span className="text-sm font-medium">{(scale * 100).toFixed(0)}%</span>
             <button
               onClick={() => setScale((prev) => Math.min(prev + 0.2, 3))}
-              className="bg-gray-500 text-white px-3 py-1 rounded-md"
+              className="bg-gray-500 text-primary px-3 py-1 rounded-md"
             >
               ➕ Zoom In
             </button>
@@ -111,7 +111,7 @@ export function PdfViewerModal({ pdfUrl, onClose }: PdfViewerModalProps) {
           <a
             href={pdfUrl}
             download
-            className="bg-green-600 text-white px-4 py-1 rounded-md hover:bg-green-500"
+            className="bg-green-600 text-primary px-4 py-1 rounded-md hover:bg-green-500"
           >
             ⬇ Download
           </a>
@@ -119,7 +119,7 @@ export function PdfViewerModal({ pdfUrl, onClose }: PdfViewerModalProps) {
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="text-white bg-red-600 hover:bg-red-500 px-3 py-1 rounded-md"
+            className="text-primary bg-red-600 hover:bg-red-500 px-3 py-1 rounded-md"
           >
             ✖ Close
           </button>

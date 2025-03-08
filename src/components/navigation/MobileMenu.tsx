@@ -20,7 +20,7 @@ export function MobileMenu() {
         className="p-2 rounded-lg bg-dark-blue hover:bg-blue-900 transition-colors"
         aria-label="Toggle menu"
       >
-        <Menu className="w-6 h-6 text-white" />
+        <Menu className="w-6 h-6 text-primary" />
       </button>
 
       {isOpen && (
@@ -30,7 +30,7 @@ export function MobileMenu() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 rounded-lg text-white hover:bg-[#16213e] transition-colors"
+                className="px-4 py-2 rounded-lg text-primary hover:bg-[#16213e] transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({

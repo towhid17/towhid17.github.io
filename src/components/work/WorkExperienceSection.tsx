@@ -5,7 +5,7 @@ import { WorkExperienceCard } from './WorkExperienceCard';
 export function WorkExperienceSection() {
   return (
     <Section 
-      icon={<Briefcase className="w-6 h-6 text-purple-200" />} 
+      icon={<Briefcase className="w-6 h-6 text-primary" />} 
       title="Work Experience" 
       defaultExpanded
     >

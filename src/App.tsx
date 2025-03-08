@@ -18,6 +18,7 @@ import { EducationSection } from './components/education/EducationSection';
 import { AcademicProjectsSection } from './components/academicProjects/AcademicProjectsSection';
 import { useState, useEffect } from 'react';
 import { NewsPage } from './components/news/NewsPage';
+import { Footer } from './components/footer/Footer';
 
 function HomePage() {
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -32,7 +33,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={`text-white/90 ${contentLoaded ? 'content-reveal' : ''}`}>
+    <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
       <Navbar />
       
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-6 z-10">
@@ -42,14 +43,14 @@ function HomePage() {
           <div className="md:col-span-4 space-y-6">
             <Section 
               title="About Me"
-              icon={<BookOpen className="w-6 h-6 text-purple-200" />}
+              icon={<BookOpen className="w-6 h-6 text-primary" />}
               defaultExpanded
             >
               <BioCard />
             </Section>
 
             <Section 
-              icon={<Microscope className="w-6 h-6 text-purple-200" />} 
+              icon={<Microscope className="w-6 h-6 text-primary" />} 
               title='Research Interests' 
               defaultExpanded
             >
@@ -78,6 +79,8 @@ function HomePage() {
 
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

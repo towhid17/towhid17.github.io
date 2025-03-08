@@ -25,7 +25,7 @@ export function Skills() {
       <div className="space-y-4">
         {skills.map((skill) => (
           <div key={skill.category}>
-            <h3 className="text-white/75 text-sm mb-2">{skill.category}</h3>
+            <h3 className="text-primary text-sm mb-2">{skill.category}</h3>
             <div className="flex flex-wrap gap-2">
               {skill.items.map((item) => (
                 <span

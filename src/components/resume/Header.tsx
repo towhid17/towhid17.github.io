@@ -19,7 +19,7 @@ export function Header() {
           
             <div className="text-left md:text-left">
               <h1 className="text-3xl font-bold mb-2">Towhidul Islam</h1>
-              <p className="text-white/75 text-lg">Software Engineer & Prospective PhD Student</p>
+              <p className="text-primary text-lg">Software Engineer & Prospective PhD Student</p>
             </div>
           </div>
 

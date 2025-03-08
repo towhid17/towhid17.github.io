@@ -80,14 +80,14 @@ interface NewsPaginationProps {
               onClick={() => onPageChange(page)}
               className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
                 currentPage === page
-                  ? 'bg-purple-600 text-white'
-                  : 'hover:bg-white/10 text-white/90'
+                  ? 'bg-purple-600 text-primary'
+                  : 'hover:bg-white/10 text-primary'
               }`}
             >
               {page}
             </button>
           ) : (
-            <span key={index} className="px-2 text-white/50">
+            <span key={index} className="px-2 text-primary">
               {page}
             </span>
           )

@@ -20,7 +20,7 @@ export function AcademicProjectCard({ academicProject }: AcademicProjectCardProp
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-purple-500 hover:underline"
+                className="text-sm text-accent hover:underline"
                 >
                 {link}
                 </a>
@@ -36,7 +36,7 @@ export function AcademicProjectCard({ academicProject }: AcademicProjectCardProp
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-200/90 text-sm"
+                className="px-3 py-1 rounded-lg bg-purple-500/10 text-primary text-sm"
               >
                 {tech}
               </span>

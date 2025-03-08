@@ -14,7 +14,7 @@ export function FeaturedNews({ items }: FeaturedNewsProps) {
   
   return (
     <div className="mb-12">
-      <h2 className="text-2xl font-bold text-white/90 mb-6 text-center">Featured Updates</h2>
+      <h2 className="text-2xl font-bold text-primary mb-6 text-center">Featured Updates</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {featuredItems.map(item => (
@@ -34,7 +34,7 @@ export function FeaturedNews({ items }: FeaturedNewsProps) {
               
               {/* Category Badge */}
               <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 text-sm rounded-full bg-purple-600/80 text-white">
+                <span className="px-3 py-1 text-sm rounded-full bg-purple-600/80 text-primary">
                   {item.category}
                 </span>
               </div>
@@ -43,16 +43,16 @@ export function FeaturedNews({ items }: FeaturedNewsProps) {
             {/* Content */}
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <div className="text-sm text-white/50">
+                <div className="text-sm text-secondary">
                   {/* {formatDistanceToNow(new Date(item.date), { addSuffix: true })} */}
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold text-white/90 group-hover:text-purple-200 transition-colors mb-3">
+              <h3 className="text-xl font-semibold text-primary group-hover:text-secondary transition-colors mb-3">
                 {item.title}
               </h3>
               
-              <p className="text-white/75 line-clamp-2">{item.description}</p>
+              <p className="text-secondary line-clamp-2">{item.description}</p>
             </div>
           </Link>
         ))}

@@ -24,11 +24,11 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
   return (
     <div className="group p-4 relative space-y-1 border-b border-white/10 last:border-0 pb-6 last:pb-0 hover:drop-shadow-lg transition-shadow">
       {/* Content */}
-      <h4 className="font-medium text-white/90 group-hover:text-purple-200 transition-colors">
+      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
         {title} ({year})
       </h4>
-      <p className="text-sm text-white/65">{venue}</p>
-      <p className="text-sm text-white/75">
+      <p className="text-sm text-primary">{venue}</p>
+      <p className="text-sm text-primary">
         Authors: {authors.map((author, i) => (
           <i key={author}>
             {author}{i < authors.length - 1 ? ', ' : ''}
@@ -45,7 +45,7 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
         {pdfUrl && (
           <a
             href={pdfUrl}
-            className="glass-card backdrop-blur-lg shadow-lg rounded-lg p-2 text-white hover:bg-[rgba(128,0,128,0.1)] transition-colors"
+            className="glass-card backdrop-blur-lg shadow-lg rounded-lg p-2 text-primary hover:bg-[rgba(128,0,128,0.1)] transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,7 +65,7 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
         {paperUrl && (
           <a
             href={paperUrl}
-            className="glass-card backdrop-blur-lg shadow-lg rounded-lg p-2 text-white hover:bg-[rgba(128,0,128,0.1)] transition-colors"
+            className="glass-card backdrop-blur-lg shadow-lg rounded-lg p-2 text-primary hover:bg-[rgba(128,0,128,0.1)] transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -6,7 +6,7 @@ import { EducationCard } from './EducationCard';
 export function EducationSection() {
   return (
     <Section 
-        icon={<GraduationCap className="w-6 h-6 text-purple-200" />} 
+        icon={<GraduationCap className="w-6 h-6 text-primary" />} 
         title="Education" 
         defaultExpanded
     >

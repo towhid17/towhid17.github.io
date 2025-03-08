@@ -24,7 +24,7 @@ export function ResearchProjectCard({ project }: ResearchProjectCardProps) {
         
         {/* Project Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+          <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
         </div>
       </div>
       
@@ -35,7 +35,7 @@ export function ResearchProjectCard({ project }: ResearchProjectCardProps) {
         {/* Expand/Collapse Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 text-purple-200 hover:text-purple-300 transition-colors"
+          className="flex items-center gap-2 text-accent hover:text-primary transition-colors"
           aria-expanded={isExpanded}
           aria-controls={`project-details-${project.id}`}
         >
@@ -69,7 +69,7 @@ export function ResearchProjectCard({ project }: ResearchProjectCardProps) {
             {/* Key Findings */}
             <div>
               <h4 className="text-lg font-medium text-primary mb-2 flex items-center gap-2">
-                <Lightbulb className="w-5 h-5 text-purple-200" />
+                <Lightbulb className="w-5 h-5 text-primary" />
                 <span>Key Findings</span>
               </h4>
               <ul className="space-y-2 text-tertiary">
@@ -100,7 +100,7 @@ export function ResearchProjectCard({ project }: ResearchProjectCardProps) {
             {/* Team Members */}
             <div>
               <h4 className="text-lg font-medium text-primary mb-2 flex items-center gap-2">
-                <Users className="w-5 h-5 text-purple-200" />
+                <Users className="w-5 h-5 text-primary" />
                 <span>Team & Collaborators</span>
               </h4>
               <p className="text-tertiary">{project.team.join(', ')}</p>
@@ -110,7 +110,7 @@ export function ResearchProjectCard({ project }: ResearchProjectCardProps) {
             {project.relatedPublications && project.relatedPublications.length > 0 && (
               <div>
                 <h4 className="text-lg font-medium text-primary mb-2 flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-purple-200" />
+                  <BookOpen className="w-5 h-5 text-primary" />
                   <span>Related Publications</span>
                 </h4>
                 <ul className="space-y-2 text-tertiary">

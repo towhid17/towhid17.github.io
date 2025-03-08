@@ -15,4 +15,16 @@
   .expanded-card {
     @apply fixed inset-4 z-50 overflow-hidden transition-all duration-300 ease-in-out;
   }
+
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-accent {
+    color: var(--text-accent);
+  }
 }
