@@ -35,7 +35,7 @@ function HomePage() {
     <div className={`text-white/90 ${contentLoaded ? 'content-reveal' : ''}`}>
       <Navbar />
       
-      <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">
+      <main className="max-w-7xl mx-auto px-4 py-8 space-y-6 z-10">
         <Header />
         
         <div className="grid md:grid-cols-6 gap-6">

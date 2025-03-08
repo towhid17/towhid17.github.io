@@ -12,8 +12,8 @@ export function BioCard() {
         📄 View My CV
       </a>
         <br/><br/>  
-        My research interests lie in the fields of <strong>System, Security, Edge Computing as well as Machine learning, and also the intersection of these fields.</strong> 
-        My current career goal is to pursue a PhD program in my field of interest.
+        My research interests lie in the fields of <strong>System, Security, Edge Computing as well as Machine learning, and also the intersection of these fields. </strong> 
+         My current career goal is to pursue a PhD program in my field of interest.
         <br/><br/>
         Currently, I’m working with <a href="https://sites.google.com/site/abdullahadnan/home?authuser=0" target="_blank">Prof. Muhammad Abdullah Adnan</a> on Bangla sign language production. I have also worked with <a href="https://sites.google.com/site/tanzimahashem/" target="_blank">Prof. Tanzima Hashem</a> on Non-Invasive Dehydration Detection 
         using deep-learning models on smartphone. This led to a first-authored paper currently under review on UbiComp/IMWUT 2024.

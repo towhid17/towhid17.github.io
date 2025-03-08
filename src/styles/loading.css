@@ -83,7 +83,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--gradient-start);
-    z-index: 4000;
+    z-index: 9000;
     transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
   }
   
