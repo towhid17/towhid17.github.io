@@ -60,8 +60,8 @@ export function NewsPage() {
   
   return (
     <div className="min-h-screen pt-10 px-6 pb-16">
-      <div className="max-w-6xl mx-auto">
-        <div className="glass-card px-6 py-8 rounded-b-lg">
+      <div className="max-w-[100rem] mx-auto">
+        <div className="glass-card px-6 py-8 rounded-b-lg bg-gradient-to-l from-purple-500/30 to-transparent">
           <Link 
             to="/" 
             className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
@@ -71,7 +71,7 @@ export function NewsPage() {
           </Link>
           
           <h1 className="text-primary text-3xl font-bold mt-4 mb-2">Resources</h1>
-          <p className="text-primary">Stay up to date with the latest research, publications, and events</p>
+          <p className="text-primary">Important resources: blogs, links, research, and events</p>
         </div>
         
         {selectedNews ? (

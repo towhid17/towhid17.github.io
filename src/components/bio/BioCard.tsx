@@ -8,8 +8,8 @@ export function BioCard() {
         and previously worked as a machine learning engineer at AIEdgeInside.
         <br/><br/>
         <a href="https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-4 py-2 rounded-lg shadow-lg transition duration-300">
-        📄 View My CV
+        className="inline-flex items-center gap-2 border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white font-semibold px-3 py-2 rounded-lg shadow-md backdrop-blur-md transition duration-300">
+        📄 My CV
       </a>
         <br/><br/>  
         My research interests lie in the fields of <strong>System, Security, Edge Computing as well as Machine learning, and also the intersection of these fields. </strong> 

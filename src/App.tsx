@@ -1,10 +1,8 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
-import { GraduationCap } from 'lucide-react';
 import { Microscope } from 'lucide-react';
 import { Header } from './components/resume/Header';
 import { BioCard } from './components/bio/BioCard';
-import { EducationCard } from './components/education/EducationCard';
 import { ResearchInterests } from './components/research/ResearchInterests';
 import { NewsCard } from './components/news/NewsCard';
 import { Navbar } from "./components/navigation/Navbar";
@@ -36,7 +34,7 @@ function HomePage() {
     <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
       <Navbar />
       
-      <main className="max-w-7xl mx-auto px-4 py-8 space-y-6 z-10">
+      <main className="max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
         <Header />
         
         <div className="grid md:grid-cols-6 gap-6">

@@ -7,7 +7,7 @@ interface NewsFilterProps {
 
 export function NewsFilter({ activeCategory, onCategoryChange }: NewsFilterProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-2 mb-8 pt-5 pb-5 glass-card rounded-t-lg">
+    <div className="flex flex-wrap justify-center gap-2 mb-8 pt-5 pb-5 glass-card rounded-t-lg bg-gradient-to-t from-purple-500/30 to-transparent opacity-80">
       {newsCategories.map(category => (
         <button
           key={category}

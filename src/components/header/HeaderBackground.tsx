@@ -102,7 +102,7 @@ export function HeaderBackground() {
   // The full-page blurred background using createPortal
   const portalElement = (
     <div
-      className="fixed top-0 left-0 w-screen h-[550px] blur-4xl opacity-30"
+      className="fixed top-0 left-0 w-screen h-[480px] blur-4xl opacity-35"
       style={{
         backgroundImage: `url(${backgroundImages[activeIndex]}?auto=format&fit=crop&w=1920&q=80)`,
         backgroundSize: "cover",
@@ -127,7 +127,7 @@ export function HeaderBackground() {
             key={src}
             className="absolute inset-0"
             style={{
-              opacity: index === activeIndex ? 0.7 : 0,
+              opacity: index === activeIndex ? 0.95 : 0,
               backgroundImage: `url(${src}?auto=format&fit=crop&w=1920&q=80)`,
               backgroundSize: "cover",
               backgroundPosition: "center",

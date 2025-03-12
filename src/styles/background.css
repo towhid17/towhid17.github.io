@@ -1,6 +1,32 @@
-@layer base {
+/* @layer base {
   body {
     @apply min-h-screen;
+    background-color: var(--gradient-start);
+    background-image: 
+      radial-gradient(
+        circle at center,
+        var(--gradient-middle) 0%,
+        var(--gradient-start) 100%
+      );
+    background-attachment: fixed;
+    background-size: cover;
+  }
+} */
+
+@layer base {
+  html {
+    font-size: 70%; /* Makes text & layout smaller without distortion */
+  }
+
+  body {
+    @apply min-h-screen;
+    
+    /* Zoom effect */
+    /* transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%; */
+    
+    /* Background */
     background-color: var(--gradient-start);
     background-image: 
       radial-gradient(

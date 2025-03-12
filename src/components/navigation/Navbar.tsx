@@ -49,7 +49,7 @@ export function Navbar() {
           : 'glass-card rounded-[0px]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-0 py-0">
+      <div className="max-w-[100rem] mx-auto px-0 py-0">
         <div className="overflow-hidden">
           <NavContainer>
             <div className="flex items-center gap-6">

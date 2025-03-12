@@ -7,7 +7,7 @@ import { GalleryButton } from '../gallery/GalleryButton';
 export function Header() {
   return (
     <div className="glass-card overflow-hidden mt-0">
-      <div className="relative h-[530px] md:h-[450px]">
+      <div className="relative h-[400px] md:h-[380px]">
         <HeaderBackground />
         
         <div className="absolute bottom-0 left-0 right-0 gap-6 items-center md:items-end">

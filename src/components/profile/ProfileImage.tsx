@@ -19,7 +19,7 @@ export function ProfileImage({ src, alt }: ProfileImageProps) {
         <img
           src={src}
           alt={alt}
-          className="w-52 h-52 rounded-xl object-cover border-2 border-purple-400/30 transition-transform duration-300 group-hover:scale-105"
+          className="w-64 h-64 rounded-xl object-cover border-2 border-purple-400/30 transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 rounded-xl ring-2 ring-purple-400/20 ring-offset-2 ring-offset-[var(--glass-bg)] transition-opacity duration-300 group-hover:ring-purple-400/40" />
       </div>
