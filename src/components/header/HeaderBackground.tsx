@@ -67,7 +67,7 @@ import { createPortal } from "react-dom";
 
 const backgroundImages = [
   "/images/cover/2.jpg",
-  "/images/cover/7.jpg",
+  "/images/cover/16.jpg",
 ] as const;
 
 export function HeaderBackground() {
