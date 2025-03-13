@@ -17,20 +17,20 @@ export function MobileMenu() {
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-lg bg-dark-blue hover:bg-blue-900 transition-colors"
+        className="p-2 rounded-lg glass-card transition-colors text-primary"
         aria-label="Toggle menu"
       >
         <Menu className="w-6 h-6 text-primary" />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-[#0a0f1d] border border-[#1a2238] rounded-xl shadow-lg p-4">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[var(--gradient-start)] p-4">
           <nav className="flex flex-col gap-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 rounded-lg text-primary hover:bg-[#16213e] transition-colors"
+                className="px-4 py-2 rounded-lg text-primary glass-card transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
