@@ -38,8 +38,8 @@ export const publications: Publication[] = [
     year: 2024,
     venue: ' IEEE/ACM 17th International Conference on Utility and Cloud Computing (UCC)',
     authors: ['Towhidul Islam', 'Asif Ahmed Utsa', 'Rezwana Reaz'],
-    pdfUrl: 'https://drive.google.com/file/d/1RkoQ47489mlfZtqsF64M8zo_FDLSgj0E/view?usp=sharing',
-    // pdfUrl: '/images/icon/test.pdf',
+    // pdfUrl: 'https://drive.google.com/file/d/1RkoQ47489mlfZtqsF64M8zo_FDLSgj0E/view?usp=sharing',
+    pdfUrl: '#',
     paperUrl: '#'
   },
 ];
@@ -52,7 +52,7 @@ export const underReview: Publication[] = [
       venue: 'UbiComp/IMWUT 24',
       authors: ['Towhidul Islam', 'Mehedi Hasan', 'Olid Hasan', 'Tanzima Hashem', 'Md. Mahbubur Rahman'],
       pdfUrl: '#',
-      paperUrl: 'https://doi.org/10.1109/NCA57778.2022.10013561'
+      paperUrl: '#'
     },
 ];
 
