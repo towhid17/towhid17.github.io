@@ -6,6 +6,9 @@ export interface Publication {
   authors: string[];
   pdfUrl?: string;
   paperUrl?: string;
+  articleId?: string; // like "Article 36"
+  pages?: string; // like "24 pages"
+  month?: string; // like "June"
 }
 
 export interface AdditionalImage {

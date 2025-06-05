@@ -24,17 +24,17 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
   return (
     <div className="group p-4 relative space-y-1 border-b border-white/10 last:border-0 pb-6 last:pb-0 hover:drop-shadow-lg transition-shadow">
       {/* Content */}
-      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
-        {title} ({year})
-      </h4>
-      <p className="text-sm text-primary">{venue}</p>
-      <p className="text-sm text-primary">
-        Authors: {authors.map((author, i) => (
-          <i key={author}>
+      <p className="text-primary">
+        {authors.map((author, i) => (
+          <span key={author} className={author === 'Towhidul Islam' ? 'font-semibold' : undefined}>
             {author}{i < authors.length - 1 ? ', ' : ''}
-          </i>
-        ))}
+          </span>
+        ))}. {year}
       </p>
+      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
+        {title}
+      </h4>
+      <p className="text-primary">{venue}</p>
       
       {/* Gradient Animation (Right to Left) */}
       <div className="absolute inset-0 right-0 h-full w-full bg-gradient-to-l from-purple-500/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></div>

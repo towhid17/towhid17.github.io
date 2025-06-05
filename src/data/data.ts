@@ -42,18 +42,19 @@ export const publications: Publication[] = [
     pdfUrl: '#',
     paperUrl: '#'
   },
+  {
+    id: 'pub-3',
+    title: 'H2OPulse: Smartphone-Assisted Vein Evaluation for Early Recognition of Dehydration',
+    year: 2025,
+    venue: 'UbiComp/IMWUT 24',
+    authors: ['Towhidul Islam', 'Mehedi Hasan Rigan', 'Olid Hasan', 'Tanzima Hashem', 'Md. Mahbubur Rahman'],
+    pdfUrl: '#',
+    paperUrl: 'https://doi.org/10.1145/3729490'
+  },
 ];
 
 export const underReview: Publication[] = [
-    {
-      id: 'ur-1',
-      title: 'HydroSense: Smartphone-Assisted Vein Evaluation for Early Recognition of Dehydration',
-      year: 2024,
-      venue: 'UbiComp/IMWUT 24',
-      authors: ['Towhidul Islam', 'Mehedi Hasan', 'Olid Hasan', 'Tanzima Hashem', 'Md. Mahbubur Rahman'],
-      pdfUrl: '#',
-      paperUrl: '#'
-    },
+    
 ];
 
 

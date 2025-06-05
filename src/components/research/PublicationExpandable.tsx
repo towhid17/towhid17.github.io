@@ -11,17 +11,21 @@ export function PublicationExpandable() {
       <NewsContainer>
         <div className="space-y-6 pr-4">
           <div className="space-y-2">
-            {publications.map((pub) => (
+            {[...publications].reverse().map((pub) => (
               <PublicationEntry key={pub.id} publication={pub} />
             ))}
           </div>
-          <hr className="border-t border-primary/10" />
-          <h3 className="text-xl font-semibold">Under Review</h3>
-          <div className="space-y-2">
-            {underReview.map((pub) => (
-              <PublicationEntry key={pub.id} publication={pub} />
-            ))}
-          </div>
+          {underReview.length > 0 && (
+            <>
+              <hr className="border-t border-primary/10" />
+              <h3 className="text-xl font-semibold">Under Review</h3>
+              <div className="space-y-2">
+                {underReview.map((pub) => (
+                  <PublicationEntry key={pub.id} publication={pub} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </NewsContainer>
     </ExpandableCard>
