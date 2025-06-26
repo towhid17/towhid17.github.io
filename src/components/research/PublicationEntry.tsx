@@ -31,9 +31,9 @@ export function PublicationEntry({ publication }: PublicationEntryProps) {
           </span>
         ))}. {year}
       </p>
-      <h4 className="font-medium text-primary group-hover:text-accent transition-colors">
+      <p className="text-lg font-medium text-primary group-hover:text-accent transition-colors">
         {title}
-      </h4>
+      </p>
       <p className="text-primary">{venue}</p>
       
       {/* Gradient Animation (Right to Left) */}

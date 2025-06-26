@@ -45,11 +45,11 @@ export function Navbar() {
     <header
       className={`sticky top-0 left-0 right-0 w-full transition-all duration-300 z-50 ${
         isScrolled
-          ? 'glass-card backdrop-blur-lg shadow-lg rounded-[0px]'
-          : 'glass-card rounded-[0px]'
+          ? 'glass-card backdrop-blur-lg shadow-xl rounded-[8px]'
+          : 'glass-card-2 rounded-[30px]'
       }`}
     >
-      <div className="max-w-[100rem] mx-auto px-0 py-0">
+      <div className="max-w-[95rem] mx-auto px-0 py-0">
         <div className="overflow-hidden">
           <NavContainer>
             <div className="flex items-center gap-6">

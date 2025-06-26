@@ -40,7 +40,7 @@ export const publications: Publication[] = [
     authors: ['Towhidul Islam', 'Asif Ahmed Utsa', 'Rezwana Reaz'],
     // pdfUrl: 'https://drive.google.com/file/d/1RkoQ47489mlfZtqsF64M8zo_FDLSgj0E/view?usp=sharing',
     pdfUrl: '#',
-    paperUrl: '#'
+    paperUrl: 'https://doi.org/10.1109/UCC63386.2024.00034'
   },
   {
     id: 'pub-3',

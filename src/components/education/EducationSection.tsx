@@ -18,6 +18,7 @@ export function EducationSection() {
             period="2018-2023"
             description=<p><strong>Thesis:</strong> 'ENFIRED: ENforcing IoT FIREwall using fog-cloud framework under Delay constraints'
                 <br/>
+                <br/>
                 <strong>Notable Courses:</strong> Computer Networks, Computer Security, Machine Learning, High-Performance Database Systems, Algorithm Engineering, Computer Architecture, Microprocessors, Microcontrollers Embedded Systems, Operating Systems, Computer Graphics, Introduction to Bioinformatics.
                 </p>
                 />

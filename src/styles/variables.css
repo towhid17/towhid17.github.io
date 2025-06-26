@@ -43,6 +43,7 @@
     --glass-border: rgba(147, 51, 234, 0.2); /* Subtle purple border */
     --glass-highlight: rgba(255, 255, 255, 0.7); /* Softer white */
 
+    --glass-bg-2: rgba(255, 255, 255, 0.01);
 
     /* Scrollbar */
     --scrollbar-track: rgba(200, 200, 200, 0.5);
@@ -61,9 +62,11 @@
     --gradient-end: #1a1a2e;
 
     /* Glass effect */
-    --glass-bg: rgba(26, 26, 46, 0.7);
+    --glass-bg: rgba(26, 26, 46, 0.5);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-highlight: rgba(26, 26, 46, 0.85);
+
+    --glass-bg-2: rgba(26, 26, 46, 0.01);
 
     /* Scrollbar */
     --scrollbar-track: rgba(30, 30, 60, 0.5);

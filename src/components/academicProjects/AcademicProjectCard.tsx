@@ -8,7 +8,7 @@ interface AcademicProjectCardProps {
 export function AcademicProjectCard({ academicProject }: AcademicProjectCardProps) {
     const { id, title, link, description, technologies } = academicProject;
   return (
-    <div id={id} className="glass-card p-6">
+    <div id={id} className="glass-card-2 p-6">
       <div className="flex items-center gap-3 mb-4">
         {/* <div className="p-2 bg-purple-500/20 rounded-lg">
           <Briefcase className="w-6 h-6 text-purple-200" />

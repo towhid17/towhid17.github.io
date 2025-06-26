@@ -32,9 +32,11 @@ function HomePage() {
 
   return (
     <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
-      <Navbar />
+      
       
       <main className="max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
+        <Navbar />
+
         <Header />
         
         <div className="grid md:grid-cols-6 gap-6">
@@ -55,6 +57,8 @@ function HomePage() {
               <ResearchInterests />
             </Section>
 
+            <EducationSection />
+
           </div>
 
           <div className="md:col-span-2 space-y-6">
@@ -62,8 +66,6 @@ function HomePage() {
           </div>
 
           <div className="md:col-span-6 space-y-6">
-
-            <EducationSection />
 
             <WorkExperienceSection />
 

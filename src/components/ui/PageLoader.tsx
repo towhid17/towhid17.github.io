@@ -10,7 +10,7 @@ export function PageLoader() {
       // Add a small delay to ensure all content is rendered
       setTimeout(() => {
         setIsVisible(false);
-      }, 800);
+      }, 400);
     };
 
     // Check if the page is already loaded
