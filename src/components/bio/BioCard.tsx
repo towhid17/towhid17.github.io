@@ -13,7 +13,6 @@ export function BioCard() {
       </a>
         <br/><br/>  
         My research interests lie in the fields of <strong>Distributed AI/ML Systems, Edge/Cloud Computing, and Network-Security with the intersection of Machine Learning. </strong> 
-        I have 
         {/* <br/><br/>
         Currently, I’m working with <a href="https://sites.google.com/site/abdullahadnan/home?authuser=0" target="_blank">Prof. Muhammad Abdullah Adnan</a> on Bangla sign language production. I have also worked with <a href="https://sites.google.com/site/tanzimahashem/" target="_blank">Prof. Tanzima Hashem</a> on Non-Invasive Dehydration Detection 
         using deep-learning models on smartphone. This led to a first-authored paper accepted at UbiComp/IMWUT 2024.
