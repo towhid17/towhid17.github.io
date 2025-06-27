@@ -45,7 +45,7 @@ export function Navbar() {
     <header
       className={`sticky top-0 left-0 right-0 w-full transition-all duration-300 z-50 ${
         isScrolled
-          ? 'glass-card backdrop-blur-lg shadow-xl rounded-[8px]'
+          ? 'glass-card backdrop-blur-lg shadow-xl rounded-bl-[15px] rounded-br-[15px] rounded-tl-[0px] rounded-tr-[0px]'
           : 'glass-card-2 rounded-[30px]'
       }`}
     >
