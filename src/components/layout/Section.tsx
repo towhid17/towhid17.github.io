@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { LG } from '../lg/lg';
 
 interface SectionProps {
   icon?: React.ReactNode;
@@ -13,7 +14,8 @@ export function Section({ icon, title, children, defaultExpanded = false }: Sect
   const id = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
-    <div id={id} className="glass-card">
+    <LG>
+    <div id={id}>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-left justify-between p-6"
@@ -44,5 +46,6 @@ export function Section({ icon, title, children, defaultExpanded = false }: Sect
         <div className="p-6 pt-0">{children}</div>
       </div>
     </div>
+    </LG>
   );
 }

@@ -17,6 +17,8 @@ import { AcademicProjectsSection } from './components/academicProjects/AcademicP
 import { useState, useEffect } from 'react';
 import { NewsPage } from './components/news/NewsPage';
 import { Footer } from './components/footer/Footer';
+import { LG } from './components/lg/lg';
+import './components/lg/lg.css';
 
 function HomePage() {
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -31,9 +33,8 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
-      
-      
+    // <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
+    <>
       <main className="max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
         <Navbar />
 
@@ -81,7 +82,8 @@ function HomePage() {
       </main>
 
       <Footer />
-    </div>
+    {/* </div> */}
+    </>
   );
 }
 

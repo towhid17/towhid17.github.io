@@ -27,13 +27,15 @@
     width: 125%; */
     
     /* Background */
-    background-color: var(--gradient-start);
-    background-image: 
+    /* background-color: var(--gradient-start); */
+    /* background-image: 
       radial-gradient(
         circle at center,
         var(--gradient-middle) 0%,
         var(--gradient-start) 100%
-      );
+      ); */
+      background: url("https://media.istockphoto.com/id/1430511443/vector/christmas-mistletoe-foliage-and-berries-vector-seamless-pattern.jpg?s=612x612&w=0&k=20&c=oqxlH7ytgd5yjBQroACirJ1gH7Au1tq8gmsdeGd-Crk=") center center;
+  animation: anim 60s linear infinite;
     background-attachment: fixed;
     background-size: cover;
   }
