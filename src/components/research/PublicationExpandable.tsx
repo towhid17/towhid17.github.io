@@ -4,9 +4,11 @@ import { Microscope } from 'lucide-react';
 import { PublicationEntry } from './PublicationEntry';
 import { publications } from '../../data/data';
 import { underReview } from '../../data/data';
+import { LG } from '../lg/lg';
 
 export function PublicationExpandable() {
   return (
+    <LG>
     <ExpandableCard icon={<Microscope className="w-6 h-6 text-primary" />} title="Publications">
       <NewsContainer>
         <div className="space-y-6 pr-4">
@@ -29,5 +31,6 @@ export function PublicationExpandable() {
         </div>
       </NewsContainer>
     </ExpandableCard>
+    </LG>
   );
 }

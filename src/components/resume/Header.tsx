@@ -3,6 +3,7 @@ import { ContactItem } from './ContactItem';
 import { ProfileImage } from '../profile/ProfileImage';
 import { HeaderBackground } from '../header/HeaderBackground';
 import { GalleryButton } from '../gallery/GalleryButton';
+import { LG } from '../lg/lg';
 
 export function Header() {
   return (
@@ -23,7 +24,8 @@ export function Header() {
             </div>
           </div>
 
-            <div className="w-full px-6 pb-6 glass-card backdrop-blur-lg rounded-none">
+            <LG>
+            <div className="w-full px-6 pb-6 rounded-none">
               <div className="h-px mb-6" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   <ContactItem icon={Mail} label="Email" value="towhidulislam2608@gmail.com" />
@@ -33,6 +35,7 @@ export function Header() {
                   <ContactItem icon={Github} label="Github" value=<a href='https://github.com/towhid17' target='_blank'>towhid17</a> />
                 </div>
             </div>
+            </LG>
 
         </div>
 

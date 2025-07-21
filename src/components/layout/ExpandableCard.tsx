@@ -28,7 +28,7 @@ export function ExpandableCard({ icon, title, children }) {
   return (
     <>
       {!isExpanded && (
-        <div id={id} className="glass-card relative w-full">
+        <div id={id} className="relative w-full">
           <div className="z-10 flex items-center justify-between p-6 bg-[var(--glass-bg-2)] backdrop-blur-md rounded-lg mb-4">
             <div className="flex items-center gap-4">
               {icon && <div className="p-2 bg-purple-500/20 rounded-lg">{icon}</div>}

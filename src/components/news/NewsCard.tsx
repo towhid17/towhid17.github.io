@@ -1,6 +1,7 @@
 import { CalendarDays } from 'lucide-react';
 import { ExpandableCard } from '../layout/ExpandableCard';
 import { NewsContainer } from './NewsContainer';
+import { LG } from '../lg/lg';
 
 interface NewsItem {
   id: string;
@@ -50,6 +51,7 @@ const newsItems: NewsItem[] = [
 
 export function NewsCard() {
   return (
+    <LG>
     <ExpandableCard title="News & Updates">
       <NewsContainer>
         <div className="space-y-6 pr-4">
@@ -77,5 +79,6 @@ export function NewsCard() {
         </div>
       </NewsContainer>
     </ExpandableCard>
+    </LG>
   );
 }
