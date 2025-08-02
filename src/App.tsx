@@ -31,10 +31,10 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
+    // <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
+      <>
       
-      
-      <main className="max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
+      <main className="text-primary max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
         <Navbar />
 
         <Header />
@@ -81,7 +81,8 @@ function HomePage() {
       </main>
 
       <Footer />
-    </div>
+    {/* </div> */}
+    </>
   );
 }
 
