@@ -1,12 +1,66 @@
 @layer components {
-  .glass-card {
+  /* .glass-card {
     @apply bg-[var(--glass-bg)] backdrop-blur-lg border border-[var(--glass-border)]
            shadow-lg rounded-2xl transition-all duration-300;
   }
 
   .glass-card:hover {
     @apply border-white/15 shadow-xl;
+  } */
+
+  /* .glass-card {
+    @apply relative overflow-hidden bg-[var(--glass-bg)] backdrop-blur-lg 
+           border border-[var(--glass-border)] shadow-lg rounded-2xl 
+           transition-all duration-300;
   }
+
+  .glass-card::before {
+    content: "";
+    @apply absolute top-0 left-0 h-full bg-[var(--glass-bg)] opacity-50 pointer-events-none;
+    width: 0%;
+    transition: width 0.7s ease-in-out;
+  }
+
+  .glass-card:hover::before {
+    width: 100%;
+  }
+
+  .glass-card:hover {
+    @apply border-white/15 shadow-xl;
+  } */
+
+  .glass-card {
+    @apply relative overflow-hidden bg-[var(--glass-bg)] backdrop-blur-lg 
+           border border-[var(--glass-border)] shadow-lg rounded-2xl 
+           transition-all duration-300;
+  }
+
+  .glass-card::before {
+    content: "";
+    @apply absolute bg-[var(--glass-bg)] opacity-90 pointer-events-none;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 10%;
+    transition:
+      width 0.7s ease-in-out,
+      height 0.7s ease-in-out,
+      border-radius 0.7s ease-in-out,
+      /* opacity 0.7s ease-in-out; */
+  }
+
+  .glass-card:hover::before {
+    width: 100%;
+    height: 10px;
+    border-radius: 0;
+    opacity: 0.9;
+  }
+
+  .glass-card:hover {
+    @apply border-white/15 shadow-xl;
+  }
+
 
   .glass-card-2 {
     @apply bg-[var(--glass-bg-2)] backdrop-blur-lg border border-[var(--glass-border)]
