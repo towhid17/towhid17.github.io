@@ -37,7 +37,7 @@ function HomePage() {
     // <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
     <>
     {/* <GlassDashboard></GlassDashboard> */}
-      <main className="max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
+      <main className="text-primary max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
         <Navbar />
 
         <Header />
@@ -79,6 +79,12 @@ function HomePage() {
             <AcademicProjectsSection />
             
           </div>
+
+          <LG>
+          <div style={{width: '40px', height: '40px', borderRadius: '50%'}}>
+            {/* small empty circle card*/}
+          </div>
+        </LG>
 
         </div>
       </main>
