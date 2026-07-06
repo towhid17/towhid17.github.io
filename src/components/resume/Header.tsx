@@ -18,8 +18,8 @@ export function Header() {
             />
           
             <div className="text-left md:text-left">
-              <h1 className="text-3xl font-bold mb-2">Towhidul Islam</h1>
-              <p className="text-primary text-lg">Software Engineer & Incoming PhD Student</p>
+              <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Towhidul Islam</h1>
+              <p className="text-secondary text-lg font-medium">Software Engineer &amp; Incoming PhD Student</p>
             </div>
           </div>
 
@@ -28,9 +28,9 @@ export function Header() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   <ContactItem icon={Mail} label="Email" value="towhidulislam2608@gmail.com" />
                   <ContactItem icon={MapPin} label="Location" value="Dhaka, Bangladesh" />
-                  <ContactItem icon={Linkedin} label="LinkedIn" value=<a href='https://www.linkedin.com/in/towhidul-islam--/' target='_blank'>Towhidul Islam</a> />
-                
-                  <ContactItem icon={Github} label="Github" value=<a href='https://github.com/towhid17' target='_blank'>towhid17</a> />
+                  <ContactItem icon={Linkedin} label="LinkedIn" value={<a className="inline-link" href="https://www.linkedin.com/in/towhidul-islam--/" target="_blank" rel="noopener noreferrer">Towhidul Islam</a>} />
+
+                  <ContactItem icon={Github} label="Github" value={<a className="inline-link" href="https://github.com/towhid17" target="_blank" rel="noopener noreferrer">towhid17</a>} />
                 </div>
             </div>
 

@@ -15,7 +15,7 @@ export function WorkExperienceSection() {
           company="Therap BD Ltd."
           period="July 2023-Present"
           description="This software service serves people with disabilities in the USA and Canada. I work in software development with Spring Framework, Oracle Cloud Infrastructure (OCI), JSP, Oracle DB, and REACT."
-          technologies={["Spring", "Oracle DB", "Oracle Cloud Infracture", "React"]}
+          technologies={["Spring", "Oracle DB", "Oracle Cloud Infrastructure", "React"]}
         />
         
         <WorkExperienceCard

@@ -48,30 +48,42 @@ const newsItems: NewsItem[] = [
   },
 ];
 
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
 export function NewsCard() {
   return (
     <ExpandableCard title="News & Updates">
       <NewsContainer>
         <div className="space-y-6 pr-4">
           {[...newsItems].reverse().map((item) => (
-            <div 
-              key={item.id} 
-              className="group border-b border-white/10 last:border-0 pb-6 last:pb-0"
+            <div
+              key={item.id}
+              className="group relative pl-4 border-l-2 border-purple-500/30 hover:border-purple-500/70 transition-colors border-b border-b-white/10 last:border-b-0 pb-6 last:pb-0"
             >
-              <div className="flex items-center gap-2 text-sm text-secondary mb-2">
+              <div className="flex items-center gap-2 text-sm text-accent mb-2">
                 <CalendarDays className="w-4 h-4" />
-                <time>{item.date}</time>
+                <time>{formatDate(item.date)}</time>
               </div>
-              <h3 className="text-lg font-medium text-primary group-hover:text-secondary transition-colors">
+              <h3 className="text-lg font-medium text-primary">
                 {item.title}
               </h3>
-              <p className="text-secondary mt-2 mb-3">{item.description}</p>
-              <a
-                href={item.link}
-                className="inline-flex items-center text-accent hover:text-primary text-sm"
-              >
-                Read More →
-              </a>
+              {item.description && (
+                <p className="text-secondary mt-2">{item.description}</p>
+              )}
+              {item.link && item.link !== '#' && (
+                <a
+                  href={item.link}
+                  className="inline-link mt-3 inline-flex items-center text-sm"
+                >
+                  Read More →
+                </a>
+              )}
             </div>
           ))}
         </div>

@@ -45,6 +45,10 @@
 
     --glass-bg-2: rgba(255, 255, 255, 0.01);
 
+    /* Ambient background accents */
+    --bg-accent-1: rgba(129, 90, 240, 0.10);
+    --bg-accent-2: rgba(56, 130, 246, 0.08);
+
     /* Scrollbar */
     --scrollbar-track: rgba(200, 200, 200, 0.5);
     --scrollbar-thumb: rgba(147, 51, 234, 0.3);
@@ -67,6 +71,10 @@
     --glass-highlight: rgba(26, 26, 46, 0.85);
 
     --glass-bg-2: rgba(26, 26, 46, 0.01);
+
+    /* Ambient background accents */
+    --bg-accent-1: rgba(139, 92, 246, 0.14);
+    --bg-accent-2: rgba(59, 130, 246, 0.10);
 
     /* Scrollbar */
     --scrollbar-track: rgba(30, 30, 60, 0.5);

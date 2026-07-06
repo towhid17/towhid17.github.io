@@ -4,11 +4,11 @@ export function BioCard() {
   return (
     <div className="space-y-4">
       <p className="text-secondary leading-relaxed text-lg">
-        I'm Towhid (he/him), a graduate from the <a href="https://cse.buet.ac.bd/">Department of CSE, BUET</a>. I am currently working as a software engineer at Therap BD Ltd., 
+        I'm Towhid (he/him), a graduate from the <a className="inline-link" href="https://cse.buet.ac.bd/" target="_blank" rel="noopener noreferrer">Department of CSE, BUET</a>. I am currently working as a software engineer at Therap BD Ltd.,
         and previously worked as a machine learning engineer at AIEdgeInside.
         <br/><br/>
         <a href="https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white font-semibold px-3 py-2 rounded-lg shadow-md backdrop-blur-md transition duration-300">
+        className="inline-flex items-center gap-2 border border-purple-500/60 text-accent hover:bg-purple-500 hover:text-white font-semibold px-4 py-2 rounded-lg shadow-md backdrop-blur-md transition duration-300">
         📄 My CV
       </a>
         <br/><br/>  

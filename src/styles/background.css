@@ -16,19 +16,29 @@
 @layer base {
   html {
     font-size: 70%; /* Makes text & layout smaller without distortion */
+    scroll-behavior: smooth;
   }
 
   body {
     @apply min-h-screen;
-    
-    /* Zoom effect */
-    /* transform: scale(0.8);
-    transform-origin: top left;
-    width: 125%; */
-    
+
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
     /* Background */
     background-color: var(--gradient-start);
-    background-image: 
+    background-image:
+      radial-gradient(
+        ellipse 80% 50% at 20% -10%,
+        var(--bg-accent-1) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 90% 10%,
+        var(--bg-accent-2) 0%,
+        transparent 60%
+      ),
       radial-gradient(
         circle at center,
         var(--gradient-middle) 0%,
@@ -36,5 +46,10 @@
       );
     background-attachment: fixed;
     background-size: cover;
+  }
+
+  /* Anchored sections shouldn't hide under the sticky navbar */
+  [id] {
+    scroll-margin-top: 6rem;
   }
 }

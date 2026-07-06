@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, ArrowUp, MailIcon } from "lucide-react";
+import { Github, Linkedin, ArrowUp, MailIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Footer() {
@@ -16,10 +16,14 @@ export function Footer() {
   return (
     <footer className="relative w-full glass-card text-primary py-6 mt-10 rounded-[0px]">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        {/* Copyright */}
-        <p className="text-sm text-secondary">
-          <MailIcon className="w-5 h-5 text-primary"/>towhidulislam2608@gmail.com
-        </p>
+        {/* Contact */}
+        <a
+          href="mailto:towhidulislam2608@gmail.com"
+          className="flex items-center gap-2 text-sm text-secondary hover:text-accent transition-colors"
+        >
+          <MailIcon className="w-5 h-5" />
+          towhidulislam2608@gmail.com
+        </a>
 
         {/* Social Media Links */}
         <div className="flex gap-4 mt-4 md:mt-0">
@@ -27,7 +31,7 @@ export function Footer() {
             href="https://github.com/towhid17"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors"
+            className="hover:text-accent transition-colors"
           >
             <Github className="w-5 h-5" />
           </a>
@@ -35,7 +39,7 @@ export function Footer() {
             href="https://www.linkedin.com/in/towhidul-islam--/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-colors"
+            className="hover:text-accent transition-colors"
           >
             <Linkedin className="w-5 h-5" />
           </a>
@@ -54,7 +58,7 @@ export function Footer() {
       {showTopButton && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 p-3 text-primary rounded-full shadow-lg hover:bg-blue-700 transition-all border-4 border-blue-600"
+          className="fixed bottom-6 right-6 p-3 glass-card rounded-full shadow-lg text-primary hover:text-accent transition-all"
           aria-label="Back to Top"
         >
           <ArrowUp className="w-5 h-5" />

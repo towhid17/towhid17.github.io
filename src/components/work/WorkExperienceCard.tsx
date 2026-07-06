@@ -26,21 +26,15 @@ export function WorkExperienceCard({
           <p className="text-secondary text-sm">{company}, {period}</p>
         </div>
       </div>
-      <p className="mt-2 text-tertiary leading-relaxed">{description}</p>
-      
+      <p className="mt-2 text-secondary leading-relaxed">{description}</p>
+
       {technologies && technologies.length > 0 && (
-        <div className="mt-4">
-          <p className="text-sm text-secondary mb-2">Technologies:</p>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1 rounded-lg bg-purple-500/10 text-secondary text-sm"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span key={tech} className="chip">
+              {tech}
+            </span>
+          ))}
         </div>
       )}
     </div>
