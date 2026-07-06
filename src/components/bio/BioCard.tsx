@@ -8,7 +8,7 @@ export function BioCard() {
         and previously worked as a machine learning engineer at AIEdgeInside.
         <br/><br/>
         <a href="https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 border border-purple-500/60 text-accent hover:bg-purple-500 hover:text-white font-semibold px-4 py-2 rounded-lg shadow-md backdrop-blur-md transition duration-300">
+        className="chip !px-5 !py-2.5 text-accent hover:!bg-purple-500 hover:!text-white font-semibold shadow-md">
         📄 My CV
       </a>
         <br/><br/>  

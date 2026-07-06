@@ -20,7 +20,7 @@ export function EducationCard({ icon, title, institution, period, description }:
           <p className="text-secondary text-md">{institution}, {period}</p>
         </div>
       </div>
-      <p className="mt-2 text-secondary leading-relaxed">{description}</p>
+      <div className="mt-2 text-secondary leading-relaxed">{description}</div>
     </div>
   );
 }

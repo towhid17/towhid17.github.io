@@ -45,6 +45,16 @@
 
     --glass-bg-2: rgba(255, 255, 255, 0.01);
 
+    /* Liquid Glass */
+    --lg-fill: rgba(255, 255, 255, 0.42);
+    --lg-fill-2: rgba(255, 255, 255, 0.22);
+    --lg-sheen: rgba(255, 255, 255, 0.5);
+    --lg-border: rgba(255, 255, 255, 0.65);
+    --lg-rim-top: rgba(255, 255, 255, 0.95);
+    --lg-rim-bottom: rgba(255, 255, 255, 0.35);
+    --lg-shadow: rgba(31, 38, 90, 0.12);
+    --lg-shadow-strong: rgba(31, 38, 90, 0.22);
+
     /* Ambient background accents */
     --bg-accent-1: rgba(129, 90, 240, 0.10);
     --bg-accent-2: rgba(56, 130, 246, 0.08);
@@ -71,6 +81,16 @@
     --glass-highlight: rgba(26, 26, 46, 0.85);
 
     --glass-bg-2: rgba(26, 26, 46, 0.01);
+
+    /* Liquid Glass */
+    --lg-fill: rgba(30, 30, 55, 0.45);
+    --lg-fill-2: rgba(40, 40, 70, 0.25);
+    --lg-sheen: rgba(255, 255, 255, 0.07);
+    --lg-border: rgba(255, 255, 255, 0.14);
+    --lg-rim-top: rgba(255, 255, 255, 0.28);
+    --lg-rim-bottom: rgba(255, 255, 255, 0.06);
+    --lg-shadow: rgba(0, 0, 0, 0.35);
+    --lg-shadow-strong: rgba(0, 0, 0, 0.5);
 
     /* Ambient background accents */
     --bg-accent-1: rgba(139, 92, 246, 0.14);

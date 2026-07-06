@@ -19,9 +19,9 @@ export function ProfileImage({ src, alt }: ProfileImageProps) {
         <img
           src={src}
           alt={alt}
-          className="w-40 h-40 md:w-64 md:h-64 rounded-xl object-cover border-2 border-purple-400/30 shadow-lg transition-transform duration-300 group-hover:scale-105"
+          className="w-40 h-40 md:w-64 md:h-64 rounded-3xl object-cover border-2 border-white/40 shadow-lg transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute inset-0 rounded-xl ring-2 ring-purple-400/20 ring-offset-2 ring-offset-[var(--glass-bg)] transition-opacity duration-300 group-hover:ring-purple-400/40" />
+        <div className="absolute inset-0 rounded-3xl ring-1 ring-white/30 transition-all duration-300 group-hover:ring-purple-400/40" style={{ boxShadow: 'inset 0 1px 1px var(--lg-rim-top)' }} />
       </div>
 
       {/* Modal with Expandable Image Viewer */}

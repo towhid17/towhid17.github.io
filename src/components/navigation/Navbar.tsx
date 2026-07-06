@@ -43,14 +43,12 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 w-full transition-all duration-300 z-50 ${
-        isScrolled
-          ? 'glass-card backdrop-blur-lg shadow-xl rounded-bl-[15px] rounded-br-[15px] rounded-tl-[0px] rounded-tr-[0px]'
-          : 'glass-card-2 rounded-[30px]'
+      className={`sticky top-3 left-0 right-0 w-full glass-card !rounded-full transition-all duration-500 z-50 ${
+        isScrolled ? 'shadow-2xl' : ''
       }`}
     >
       <div className="max-w-[95rem] mx-auto px-0 py-0">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-full">
           <NavContainer>
             <div className="flex items-center gap-6">
               <NavBrand />

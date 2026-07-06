@@ -29,51 +29,71 @@
     @apply border-white/15 shadow-xl;
   } */
 
+  /* iOS-style Liquid Glass: translucent fill + top sheen, heavy blur with
+     color saturation, specular rim (inset highlights), soft deep shadow. */
   .glass-card {
-    @apply relative overflow-hidden bg-[var(--glass-bg)] backdrop-blur-lg 
-           border border-[var(--glass-border)] shadow-lg rounded-2xl 
-           transition-all duration-300;
+    @apply relative overflow-hidden transition-all duration-300;
+    border-radius: 28px;
+    background:
+      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 45%),
+      var(--lg-fill);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--lg-border);
+    box-shadow:
+      0 8px 32px var(--lg-shadow),
+      inset 0 1px 1px var(--lg-rim-top),
+      inset 0 -1px 1px var(--lg-rim-bottom);
   }
 
+  /* Refraction hairline along the top edge */
   .glass-card::before {
     content: "";
     @apply absolute pointer-events-none;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    border-radius: 0;
-    background: linear-gradient(90deg, rgba(139, 92, 246, 0.7), rgba(59, 130, 246, 0.5));
-    transition: width 0.5s ease-in-out;
-  }
-
-  .glass-card:hover::before {
-    width: 100%;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--lg-rim-top), transparent);
   }
 
   .glass-card:hover {
-    @apply shadow-xl;
-    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow:
+      0 12px 40px var(--lg-shadow-strong),
+      inset 0 1px 1px var(--lg-rim-top),
+      inset 0 -1px 1px var(--lg-rim-bottom);
   }
 
-
   .glass-card-2 {
-    @apply bg-[var(--glass-bg-2)] backdrop-blur-lg border border-[var(--glass-border)]
-           shadow-md rounded-2xl transition-all duration-300;
+    @apply relative transition-all duration-300;
+    border-radius: 22px;
+    background:
+      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 50%),
+      var(--lg-fill-2);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid var(--lg-border);
+    box-shadow:
+      0 4px 16px var(--lg-shadow),
+      inset 0 1px 1px var(--lg-rim-top);
   }
 
   .glass-card-2:hover {
-    @apply shadow-xl;
-    border-color: rgba(139, 92, 246, 0.35);
+    transform: translateY(-2px);
+    box-shadow:
+      0 10px 28px var(--lg-shadow-strong),
+      inset 0 1px 1px var(--lg-rim-top);
+    border-color: rgba(139, 92, 246, 0.4);
   }
 
   .nav-link {
-    @apply px-4 py-2 rounded-lg transition-colors;
+    @apply px-4 py-2 rounded-full transition-all duration-300;
   }
 
   .nav-link:hover {
-    background: rgba(139, 92, 246, 0.12);
+    background: rgba(139, 92, 246, 0.14);
     color: var(--text-accent);
+    box-shadow: inset 0 1px 1px var(--lg-rim-top);
   }
 
   .inline-link {
@@ -86,14 +106,22 @@
   }
 
   .chip {
-    @apply px-3 py-1.5 rounded-full text-sm font-medium border transition-colors;
-    background: rgba(139, 92, 246, 0.08);
-    border-color: rgba(139, 92, 246, 0.25);
+    @apply px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-300;
+    background:
+      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 60%),
+      rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: inset 0 1px 1px var(--lg-rim-top);
     color: var(--text-primary);
   }
 
   .chip:hover {
-    background: rgba(139, 92, 246, 0.18);
+    background:
+      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 60%),
+      rgba(139, 92, 246, 0.2);
+    transform: translateY(-1px);
   }
 
   .expanded-card {
