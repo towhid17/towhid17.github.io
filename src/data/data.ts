@@ -23,15 +23,16 @@ export const galleryImages: GalleryImage[] = [
 ];
 
 export const publications: Publication[] = [
-  {
-    id: 'pub-1',
-    title: 'Enforcing delay-aware fog-cloud based IoT firewall (work in progress)',
-    year: 2022,
-    venue: 'IEEE 21st International Symposium on Network Computing and Applications (NCA)',
-    authors: ['Towhidul Islam', 'Asif Ahmed', 'Tanvir Raihan', 'Rezwana Reaz'],
-    pdfUrl: '#',
-    paperUrl: 'https://doi.org/10.1109/NCA57778.2022.10013561'
-  },
+  // Hidden from the portfolio: early work-in-progress version of ENFIRED.
+  // {
+  //   id: 'pub-1',
+  //   title: 'Enforcing delay-aware fog-cloud based IoT firewall (work in progress)',
+  //   year: 2022,
+  //   venue: 'IEEE 21st International Symposium on Network Computing and Applications (NCA)',
+  //   authors: ['Towhidul Islam', 'Asif Ahmed', 'Tanvir Raihan', 'Rezwana Reaz'],
+  //   pdfUrl: '#',
+  //   paperUrl: 'https://doi.org/10.1109/NCA57778.2022.10013561'
+  // },
   {
     id: 'pub-2',
     title: 'ENFIRED: ENforcing IoT FIREwall using fog-cloud framework under Delay constraints',

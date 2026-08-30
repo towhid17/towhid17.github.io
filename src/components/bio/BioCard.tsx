@@ -2,22 +2,22 @@ import { Briefcase, GraduationCap, Sparkles } from 'lucide-react';
 
 const facts = [
   {
-    icon: Briefcase,
+    icon: GraduationCap,
     label: 'Now',
-    value: 'Software Engineer, Therap BD Ltd.',
-    accent: '16 185 129',
+    value: 'PhD Student, UC Santa Barbara',
+    accent: '124 58 237',
+  },
+  {
+    icon: Briefcase,
+    label: 'Research',
+    value: 'PhD Researcher, RACELab',
+    accent: '6 182 212',
   },
   {
     icon: Sparkles,
-    label: 'Previously',
-    value: 'ML Engineer, AIEdgeInside',
+    label: 'Focus',
+    value: 'Distributed systems, IoT & AI',
     accent: '245 158 11',
-  },
-  {
-    icon: GraduationCap,
-    label: 'Studied',
-    value: 'CSE at BUET',
-    accent: '59 130 246',
   },
 ] as const;
 
@@ -34,9 +34,16 @@ export function BioCard() {
         >
           Department of CSE, BUET
         </a>
-        . I currently work as a software engineer at Therap BD Ltd., and
-        previously worked as a machine learning engineer at AIEdgeInside. My
-        research sits at the intersection of{' '}
+        . I am now a first-year Computer Science PhD student at the{' '}
+        <a
+          className="link-accent"
+          href="https://www.cs.ucsb.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          University of California, Santa Barbara
+        </a>
+        , where I conduct research with RACELab. My work sits at the intersection of{' '}
         <strong className="font-semibold text-[var(--text-1)]">
           distributed AI/ML systems, edge and cloud computing, and network
           security

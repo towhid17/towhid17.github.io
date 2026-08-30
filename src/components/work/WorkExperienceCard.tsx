@@ -7,6 +7,7 @@ interface WorkExperienceCardProps {
   period: string;
   description: string;
   technologies?: string[];
+  highlights?: string[];
   logo?: ReactNode;
   accent: string;
   accent2: string;
@@ -19,6 +20,7 @@ export function WorkExperienceCard({
   period,
   description,
   technologies,
+  highlights,
   logo,
   accent,
   accent2,
@@ -51,6 +53,20 @@ export function WorkExperienceCard({
       <p className="mt-4 text-sm leading-relaxed text-[var(--text-2)]">
         {description}
       </p>
+
+      {highlights && highlights.length > 0 && (
+        <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[var(--text-2)]">
+          {highlights.map((highlight) => (
+            <li key={highlight} className="flex gap-3">
+              <span
+                className="mt-[0.55rem] h-1.5 w-1.5 flex-none rounded-full bg-[rgb(var(--accent))] shadow-[0_0_10px_rgb(var(--accent)/0.65)]"
+                aria-hidden="true"
+              />
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+      )}
 
       {technologies && technologies.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">

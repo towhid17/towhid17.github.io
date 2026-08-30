@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
-import { useTilt } from '../../hooks/useTilt';
 
 interface AvatarProps {
   src: string;
@@ -11,15 +10,13 @@ interface AvatarProps {
 /** Portrait that tilts toward the cursor and opens full size on click. */
 export function Avatar({ src, alt }: AvatarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const tiltRef = useTilt<HTMLButtonElement>(12);
 
   return (
     <>
       <button
-        ref={tiltRef}
         type="button"
         onClick={() => setIsOpen(true)}
-        className="tilt avatar-frame group/avatar relative block"
+        className="avatar-frame relative block"
         aria-label={`Open portrait of ${alt}`}
       >
         <span className="avatar-glow" aria-hidden="true" />
@@ -28,7 +25,7 @@ export function Avatar({ src, alt }: AvatarProps) {
           alt={alt}
           width={288}
           height={288}
-          className="relative z-10 h-36 w-36 rounded-[26px] object-cover shadow-2xl transition-transform duration-500 group-hover/avatar:scale-[1.03] sm:h-44 sm:w-44 lg:h-56 lg:w-56"
+          className="relative z-10 h-36 w-36 rounded-[26px] object-cover shadow-2xl sm:h-44 sm:w-44 lg:h-56 lg:w-56"
         />
       </button>
 

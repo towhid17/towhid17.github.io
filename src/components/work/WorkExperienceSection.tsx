@@ -1,4 +1,4 @@
-import { Briefcase, Cpu } from 'lucide-react';
+import { BookOpenCheck, Briefcase, Cpu, FlaskConical } from 'lucide-react';
 import { Section } from '../layout/Section';
 import { WorkExperienceCard } from './WorkExperienceCard';
 
@@ -8,16 +8,43 @@ export function WorkExperienceSection() {
       id="experience"
       icon={<Briefcase className="h-5 w-5" />}
       title="Work Experience"
-      eyebrow="Industry roles"
+      eyebrow="Research, teaching & industry"
       accent="emerald"
       defaultExpanded
     >
       <div className="grid gap-4 lg:grid-cols-2">
         <WorkExperienceCard
+          title="PhD Researcher"
+          company="RACELab, UC Santa Barbara"
+          period="Sep 2025 – Present"
+          current
+          accent="124 58 237"
+          accent2="6 182 212"
+          logo={<FlaskConical className="h-5 w-5" />}
+          description="Researching distributed systems, IoT, and AI for adaptive edge environments."
+          highlights={[
+            'Developing reinforcement learning methods for scheduling and spatial data placement to improve resource utilization and query efficiency in distributed IoT–edge environments.',
+            'Designing a custom simulation framework for spatial data block placement and range-query evaluation, and using it with a simplified IoT deployment to evaluate adaptive placement and scheduling policies.',
+          ]}
+          technologies={['Distributed Systems', 'IoT', 'Reinforcement Learning', 'Edge Computing']}
+        />
+
+        <WorkExperienceCard
+          title="Teaching Assistant"
+          company="UC Santa Barbara · California, USA"
+          period="Sep 2025 – Present"
+          current
+          accent="59 130 246"
+          accent2="16 185 129"
+          logo={<BookOpenCheck className="h-5 w-5" />}
+          description="Tutoring Introduction to Computer Communication Networks and Problem Solving II, with classes averaging approximately 30 students."
+          technologies={['Computer Networks', 'Problem Solving', 'Teaching']}
+        />
+
+        <WorkExperienceCard
           title="Software Engineer"
           company="Therap BD Ltd."
-          period="July 2023 – Present"
-          current
+          period="July 2023 – Aug 31, 2025"
           accent="16 185 129"
           accent2="6 182 212"
           logo={

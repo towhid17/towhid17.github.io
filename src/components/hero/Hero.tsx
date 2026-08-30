@@ -1,7 +1,6 @@
 import { FileText, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { HeroBackdrop } from './HeroBackdrop';
 import { Avatar } from './Avatar';
-import { useTilt } from '../../hooks/useTilt';
 import { academicProjects, publications } from '../../data/data';
 
 const CV_URL =
@@ -25,19 +24,17 @@ const accentTriplets: Record<string, string> = {
 };
 
 export function Hero() {
-  const tiltRef = useTilt<HTMLDivElement>(3);
-
   return (
     <header className="relative">
-      <div ref={tiltRef} className="card tilt tilt-3d sheen relative overflow-hidden">
+      <div className="card sheen relative overflow-hidden">
         <HeroBackdrop />
 
         <div className="relative z-10 grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-14">
           {/* ---- Identity ---- */}
-          <div className="tilt-layer order-2 text-center lg:order-1 lg:text-left">
+          <div className="order-2 text-center lg:order-1 lg:text-left">
             <span className="chip mb-5 !border-white/25 !bg-white/10 text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
-              Incoming PhD Student
+              First-year PhD Student at UCSB
             </span>
 
             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
@@ -45,12 +42,12 @@ export function Hero() {
             </h1>
 
             <p className="mt-4 text-lg font-medium text-white/90 sm:text-xl">
-              Software Engineer at Therap BD, building distributed systems.
+              PhD researcher at RACELab, UC Santa Barbara.
             </p>
 
             <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-white/70 lg:mx-0">
-              Researching distributed AI/ML systems, edge and cloud computing,
-              and network security.
+              Building adaptive scheduling and spatial data-placement methods
+              for distributed IoT and edge environments.
             </p>
 
             {/* ---- Actions ---- */}
@@ -96,12 +93,12 @@ export function Hero() {
 
             <p className="mt-6 flex items-center justify-center gap-2 text-sm text-white/60 lg:justify-start">
               <MapPin className="h-4 w-4" />
-              Dhaka, Bangladesh
+              Santa Barbara, California
             </p>
           </div>
 
           {/* ---- Portrait ---- */}
-          <div className="tilt-layer order-1 flex justify-center lg:order-2">
+          <div className="order-1 flex justify-center lg:order-2">
             <Avatar src="/images/profile/profile.jpg" alt="Towhidul Islam" />
           </div>
         </div>

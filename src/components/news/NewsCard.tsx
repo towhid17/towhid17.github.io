@@ -39,13 +39,20 @@ const newsItems: NewsItem[] = [
     description:
       '"H2OPulse: Smartphone-Assisted Vein Evaluation for Early Recognition of Dehydration".',
   },
+  {
+    id: '6',
+    date: '2025-09-01',
+    title: 'Started PhD in Computer Science at UC Santa Barbara',
+    description: 'Joined RACELab as a PhD researcher working on distributed systems, IoT, and AI.',
+  },
 ];
 
 function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString('en-US', {
+  return new Date(`${date}T00:00:00Z`).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    timeZone: 'UTC',
   });
 }
 

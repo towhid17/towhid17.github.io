@@ -33,7 +33,7 @@ export function Footer() {
                 <span className="text-gradient">Let's build something</span>
               </h2>
               <p className="mt-2 text-sm text-[var(--text-2)]">
-                Open to PhD opportunities and research collaborations.
+                Open to research collaborations in distributed systems, IoT, and AI.
               </p>
             </div>
 
