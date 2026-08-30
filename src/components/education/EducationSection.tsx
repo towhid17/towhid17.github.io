@@ -1,5 +1,6 @@
 import { GraduationCap, School2 } from 'lucide-react';
 import { Section } from '../layout/Section';
+import { useTilt } from '../../hooks/useTilt';
 
 const ucsbCourses = [
   'Operating Systems',
@@ -22,6 +23,9 @@ const buetCourses = [
 ];
 
 export function EducationSection() {
+  const ucsbTiltRef = useTilt<HTMLElement>(7);
+  const buetTiltRef = useTilt<HTMLElement>(7);
+
   return (
     <Section
       id="education"
@@ -32,9 +36,12 @@ export function EducationSection() {
       defaultExpanded
     >
       <div className="grid gap-4">
-        <article className="card-soft p-5 sm:p-6">
+        <article
+          ref={ucsbTiltRef}
+          className="card-soft tilt sheen rim-glow group/education p-5 sm:p-6"
+        >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <span className="icon-badge !h-14 !w-14 !rounded-2xl">
+            <span className="icon-badge !h-14 !w-14 !rounded-2xl transition-transform duration-500 group-hover/education:-rotate-6 group-hover/education:scale-110">
               <School2 className="h-7 w-7" />
             </span>
             <div>
@@ -67,9 +74,12 @@ export function EducationSection() {
           </div>
         </article>
 
-        <article className="card-soft p-5 sm:p-6">
+        <article
+          ref={buetTiltRef}
+          className="card-soft tilt sheen rim-glow group/education p-5 sm:p-6"
+        >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <span className="grid h-14 w-14 flex-none place-items-center rounded-2xl bg-white p-2 shadow-lg">
+            <span className="grid h-14 w-14 flex-none place-items-center rounded-2xl bg-white p-2 shadow-lg transition-transform duration-500 group-hover/education:-rotate-6 group-hover/education:scale-110">
               <img
                 src="/images/icon/BUET_LOGO.png"
                 alt="BUET logo"
