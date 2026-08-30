@@ -1,87 +1,73 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { BookOpen } from 'lucide-react';
-import { Microscope } from 'lucide-react';
-import { Header } from './components/resume/Header';
+import { BookOpen, Microscope } from 'lucide-react';
+
+import { Aurora } from './components/layout/Aurora';
+import { Section } from './components/layout/Section';
+import { Navbar } from './components/navigation/Navbar';
+import { ScrollProgress } from './components/navigation/ScrollProgress';
+import { Hero } from './components/hero/Hero';
 import { BioCard } from './components/bio/BioCard';
 import { ResearchInterests } from './components/research/ResearchInterests';
-import { NewsCard } from './components/news/NewsCard';
-import { Navbar } from "./components/navigation/Navbar";
-import { Section } from './components/layout/Section';
-import { PublicationExpandable } from './components/research/PublicationExpandable';
-import { GalleryGrid } from './components/gallery/GalleryGrid';
-import './styles/animations.css';
-import { WorkExperienceSection } from './components/work/WorkExperienceSection';
-import { ResearchProjectsSection } from './components/research/ResearchSection';
 import { EducationSection } from './components/education/EducationSection';
+import { WorkExperienceSection } from './components/work/WorkExperienceSection';
+import { PublicationExpandable } from './components/research/PublicationExpandable';
 import { AcademicProjectsSection } from './components/academicProjects/AcademicProjectsSection';
-import { useState, useEffect } from 'react';
-import { NewsPage } from './components/news/NewsPage';
+import { NewsCard } from './components/news/NewsCard';
 import { Footer } from './components/footer/Footer';
+import { NewsPage } from './components/news/NewsPage';
+import { GalleryGrid } from './components/gallery/GalleryGrid';
+
+import './styles/animations.css';
 
 function HomePage() {
-  const [contentLoaded, setContentLoaded] = useState(false);
-  
-  useEffect(() => {
-    // Mark content as loaded after a short delay
-    const timer = setTimeout(() => {
-      setContentLoaded(true);
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    // <div className={`text-primary ${contentLoaded ? 'content-reveal' : ''}`}>
-      <>
-      
-      <main className="text-primary max-w-[100rem] mx-auto px-2 py-4 space-y-4 z-10">
+    <>
+      <ScrollProgress />
+
+      <main id="top" className="mx-auto max-w-7xl px-3 pt-3 sm:px-5 sm:pt-4">
         <Navbar />
 
-        <Header />
-        
-        <div className="grid md:grid-cols-6 gap-6">
-          <div className="md:col-span-4 space-y-6">
-            <Section 
-              title="About Me"
-              icon={<BookOpen className="w-6 h-6 text-primary" />}
-              defaultExpanded
-            >
-              <BioCard />
-            </Section>
+        <div className="space-y-6">
+          <Hero />
 
-            <Section 
-              icon={<Microscope className="w-6 h-6 text-primary" />} 
-              title='Research Interests' 
-              defaultExpanded
-            >
-              <ResearchInterests />
-            </Section>
+          {/* Primary column + sticky news rail */}
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start">
+            <div className="space-y-6">
+              <Section
+                id="about"
+                title="About Me"
+                eyebrow="Who I am"
+                icon={<BookOpen className="h-5 w-5" />}
+                accent="violet"
+                defaultExpanded
+              >
+                <BioCard />
+              </Section>
 
-            <EducationSection />
+              <Section
+                id="research"
+                title="Research Interests"
+                eyebrow="What I work on"
+                icon={<Microscope className="h-5 w-5" />}
+                accent="cyan"
+                defaultExpanded
+              >
+                <ResearchInterests />
+              </Section>
 
-          </div>
+              <EducationSection />
+            </div>
 
-          <div className="md:col-span-2 space-y-6">
             <NewsCard />
           </div>
 
-          <div className="md:col-span-6 space-y-6">
-
-            <WorkExperienceSection />
-
-            {/* <ResearchProjectsSection /> */}
-
-            <PublicationExpandable />
-
-            <AcademicProjectsSection />
-            
-          </div>
-
+          <WorkExperienceSection />
+          <PublicationExpandable />
+          <AcademicProjectsSection />
         </div>
       </main>
 
       <Footer />
-    {/* </div> */}
     </>
   );
 }
@@ -89,6 +75,7 @@ function HomePage() {
 export default function App() {
   return (
     <Router>
+      <Aurora />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="gallery" element={<GalleryGrid />} />

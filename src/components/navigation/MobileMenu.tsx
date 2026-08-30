@@ -1,57 +1,80 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-
-const navItems = [
-  { label: 'Bio', href: '#about-me' },
-  { label: 'Education', href: '#education' },
-  { label: 'Research Interests', href: '#research-interests' },
-  { label: 'Work Experience', href: '#work-experience' },
-  { label: 'Publications', href: '#publications' },
-  { label: 'Academic Projects', href: '#academic-projects' },
-] as const;
+import { Menu, X } from 'lucide-react';
+import { navItems, scrollToSection } from './navItems';
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Close on Escape, and don't let the page scroll behind the sheet.
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-full glass-card-2 transition-colors text-primary"
-        aria-label="Toggle menu"
+        type="button"
+        onClick={() => setIsOpen((open) => !open)}
+        className="icon-btn"
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isOpen}
       >
-        {isOpen ? <X className="w-6 h-6 text-primary" /> : <Menu className="w-6 h-6 text-primary" />}
+        {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       </button>
 
       {isOpen &&
         createPortal(
-          <>
+          <div className="fixed inset-0 z-[100]">
             <div
-              className="fixed inset-0 z-40"
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
-            <div className="fixed top-20 left-3 right-3 z-50 glass-card p-3">
-              <nav className="flex flex-col gap-1">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="nav-link text-primary text-lg"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector(item.href)?.scrollIntoView({
-                        behavior: 'smooth',
-                      });
-                      setIsOpen(false);
-                    }}
-                  >
-                    {item.label}
-                  </a>
+            <nav className="card menu-sheet absolute inset-x-3 top-3 p-3">
+              <div className="flex items-center justify-between px-2 pb-2">
+                <span className="text-sm font-semibold text-[var(--text-3)]">
+                  Navigate
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="icon-btn"
+                  aria-label="Close menu"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </div>
+
+              <ul className="flex flex-col">
+                {navItems.map((item, index) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="menu-item"
+                      style={{ animationDelay: `${index * 45}ms` }}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setIsOpen(false);
+                        scrollToSection(item.id);
+                      }}
+                    >
+                      <span className="menu-item__dot" aria-hidden="true" />
+                      {item.label}
+                    </a>
+                  </li>
                 ))}
-              </nav>
-            </div>
-          </>,
+              </ul>
+            </nav>
+          </div>,
           document.body
         )}
     </div>

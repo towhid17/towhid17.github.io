@@ -1,104 +1,97 @@
- /* @layer base {
-  :root { */
-    /* Background gradient */
-    /* --gradient-start: #1a1a2e;
-    --gradient-middle: #2a2a4a;
-    --gradient-end: #1a1a2e; */
-    
-    /* Glass effect */
-    /* --glass-bg: rgba(26, 26, 46, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-highlight: rgba(26, 26, 46, 0.85); */
-
-    /* Scrollbar */
-    /* --scrollbar-track: rgba(30, 30, 60, 0.5);
-    --scrollbar-thumb: rgba(147, 51, 234, 0.3);
-    --scrollbar-thumb-hover: rgba(147, 51, 234, 0.5); */
-  /* }
-} */
-
 @layer base {
-  /* Light Mode (Default) */
+  /* ==========================================================
+     Aurora Depth — design tokens
+     Brand hues are stored as raw RGB triplets so any component
+     can mix its own alpha: rgb(var(--violet) / 0.4)
+     ========================================================== */
   :root {
-    --text-primary: #1f2937; /* Dark Gray */
-    --text-secondary: #374151; /* Lighter Gray */
-    --text-accent: #4f46e5; /* Blue */
+    --violet: 124 58 237;
+    --indigo: 79 70 229;
+    --blue: 59 130 246;
+    --cyan: 6 182 212;
+    --emerald: 16 185 129;
+    --amber: 245 158 11;
+    --rose: 244 63 94;
+    --fuchsia: 217 70 239;
 
-    /* Background gradient */
-    /* --gradient-start: #f3f4f6;
-    --gradient-middle: #e5e7eb;
-    --gradient-end: #f3f4f6; */
-    
-    /* Glass effect */
-    /* --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.08);
-    --glass-highlight: rgba(255, 255, 255, 0.85); */
-
-    --gradient-start: rgba(226, 226, 226, 0.8); /* Soft white */
-    --gradient-middle: rgba(224, 223, 223, 0.7); /* Very light gray */
-    --gradient-end: rgba(216, 215, 215, 0.8); /* Soft white */
-
-    /* Glass effect */
-    --glass-bg: rgba(255, 255, 255, 0.5); /* More transparency */
-    --glass-border: rgba(147, 51, 234, 0.2); /* Subtle purple border */
-    --glass-highlight: rgba(255, 255, 255, 0.7); /* Softer white */
-
-    --glass-bg-2: rgba(255, 255, 255, 0.01);
-
-    /* Liquid Glass */
-    --lg-fill: rgba(255, 255, 255, 0.42);
-    --lg-fill-2: rgba(255, 255, 255, 0.22);
-    --lg-sheen: rgba(255, 255, 255, 0.5);
-    --lg-border: rgba(255, 255, 255, 0.65);
-    --lg-rim-top: rgba(255, 255, 255, 0.95);
-    --lg-rim-bottom: rgba(255, 255, 255, 0.35);
-    --lg-shadow: rgba(31, 38, 90, 0.12);
-    --lg-shadow-strong: rgba(31, 38, 90, 0.22);
-
-    /* Ambient background accents */
-    --bg-accent-1: rgba(129, 90, 240, 0.10);
-    --bg-accent-2: rgba(56, 130, 246, 0.08);
-
-    /* Scrollbar */
-    --scrollbar-track: rgba(200, 200, 200, 0.5);
-    --scrollbar-thumb: rgba(147, 51, 234, 0.3);
-    --scrollbar-thumb-hover: rgba(147, 51, 234, 0.5);
+    /* Default section accent pair (overridden per section) */
+    --accent: var(--violet);
+    --accent-2: var(--fuchsia);
   }
 
-  /* Dark Mode */
+  /* ---------------- Light theme ---------------- */
+  :root {
+    color-scheme: light;
+
+    --bg: #eaeefb;
+    --bg-deep: #dde3f7;
+
+    --text-1: #0d1326;
+    --text-2: #47536b;
+    --text-3: #6b7690;
+
+    --surface: rgba(255, 255, 255, 0.72);
+    --surface-2: rgba(255, 255, 255, 0.55);
+    --surface-solid: #ffffff;
+
+    --border: rgba(13, 19, 38, 0.09);
+    --border-strong: rgba(13, 19, 38, 0.16);
+    --rim: rgba(255, 255, 255, 0.9);
+
+    --shadow: rgba(25, 33, 79, 0.16);
+    --shadow-strong: rgba(25, 33, 79, 0.26);
+
+    --orb-1: rgb(var(--violet) / 0.42);
+    --orb-2: rgb(var(--cyan) / 0.38);
+    --orb-3: rgb(var(--fuchsia) / 0.32);
+    --grid-line: rgba(13, 19, 38, 0.05);
+
+    /* Legacy aliases — keep untouched routes (gallery, news, pdf) working */
+    --text-primary: var(--text-1);
+    --text-secondary: var(--text-2);
+    --text-accent: rgb(var(--violet));
+    --glass-bg: var(--surface);
+    --glass-bg-2: var(--surface-2);
+    --glass-border: var(--border);
+    --glass-highlight: var(--rim);
+    --gradient-start: var(--bg);
+    --gradient-middle: var(--bg-deep);
+    --gradient-end: var(--bg);
+
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: rgb(var(--violet) / 0.35);
+    --scrollbar-thumb-hover: rgb(var(--violet) / 0.6);
+  }
+
+  /* ---------------- Dark theme ---------------- */
   .dark {
-    --text-primary: #f9fafb; /* White */
-    --text-secondary: #bcc0c5; /* Light Gray */
-    --text-accent: #a78bfa; /* Purple */
+    color-scheme: dark;
 
-    --gradient-start: #1a1a2e;
-    --gradient-middle: #2a2a4a;
-    --gradient-end: #1a1a2e;
+    --bg: #05060f;
+    --bg-deep: #0a0b1c;
 
-    /* Glass effect */
-    --glass-bg: rgba(26, 26, 46, 0.5);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-highlight: rgba(26, 26, 46, 0.85);
+    --text-1: #f2f5fc;
+    --text-2: #a9b4cc;
+    --text-3: #7d879f;
 
-    --glass-bg-2: rgba(26, 26, 46, 0.01);
+    --surface: rgba(19, 22, 44, 0.62);
+    --surface-2: rgba(28, 32, 58, 0.45);
+    --surface-solid: #12142a;
 
-    /* Liquid Glass */
-    --lg-fill: rgba(30, 30, 55, 0.45);
-    --lg-fill-2: rgba(40, 40, 70, 0.25);
-    --lg-sheen: rgba(255, 255, 255, 0.07);
-    --lg-border: rgba(255, 255, 255, 0.14);
-    --lg-rim-top: rgba(255, 255, 255, 0.28);
-    --lg-rim-bottom: rgba(255, 255, 255, 0.06);
-    --lg-shadow: rgba(0, 0, 0, 0.35);
-    --lg-shadow-strong: rgba(0, 0, 0, 0.5);
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.2);
+    --rim: rgba(255, 255, 255, 0.14);
 
-    /* Ambient background accents */
-    --bg-accent-1: rgba(139, 92, 246, 0.14);
-    --bg-accent-2: rgba(59, 130, 246, 0.10);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --shadow-strong: rgba(0, 0, 0, 0.7);
 
-    /* Scrollbar */
-    --scrollbar-track: rgba(30, 30, 60, 0.5);
-    --scrollbar-thumb: rgba(147, 51, 234, 0.3);
-    --scrollbar-thumb-hover: rgba(147, 51, 234, 0.5);
+    --orb-1: rgb(var(--violet) / 0.5);
+    --orb-2: rgb(var(--cyan) / 0.34);
+    --orb-3: rgb(var(--fuchsia) / 0.36);
+    --grid-line: rgba(255, 255, 255, 0.04);
+
+    --text-accent: rgb(167 139 250);
+    --scrollbar-thumb: rgb(var(--violet) / 0.45);
+    --scrollbar-thumb-hover: rgb(var(--violet) / 0.75);
   }
 }

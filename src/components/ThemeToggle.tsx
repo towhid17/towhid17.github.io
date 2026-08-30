@@ -1,20 +1,28 @@
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
+/** Sun and moon cross-fade and spin past each other on toggle. */
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <button
+      type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-      aria-label="Toggle theme"
+      className="icon-btn relative overflow-hidden"
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
     >
-      {theme === 'dark' ? (
-        <Sun className="w-5 h-5" />
-      ) : (
-        <Moon className="w-5 h-5" />
-      )}
+      <Sun
+        className={`absolute h-4 w-4 transition-all duration-500 ${
+          isDark ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-50 opacity-0'
+        }`}
+      />
+      <Moon
+        className={`absolute h-4 w-4 transition-all duration-500 ${
+          isDark ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100'
+        }`}
+      />
     </button>
   );
 }

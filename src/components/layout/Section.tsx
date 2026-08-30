@@ -1,48 +1,79 @@
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { accentVars, type AccentName } from '../../styles/accents';
+import { useReveal } from '../../hooks/useReveal';
 
 interface SectionProps {
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   title: string;
-  children: React.ReactNode;
+  /** Short line under the title, e.g. a count or a one-line summary. */
+  eyebrow?: string;
+  children: ReactNode;
   defaultExpanded?: boolean;
+  accent?: AccentName;
+  /** Anchor id; derived from the title when omitted. */
+  id?: string;
+  /** Right-hand slot in the header, e.g. an extra action. */
+  action?: ReactNode;
 }
 
-export function Section({ icon, title, children, defaultExpanded = false }: SectionProps) {
+export function Section({
+  icon,
+  title,
+  eyebrow,
+  children,
+  defaultExpanded = false,
+  accent = 'violet',
+  id,
+  action,
+}: SectionProps) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const id = title.toLowerCase().replace(/\s+/g, '-');
+  const sectionId = id ?? title.toLowerCase().replace(/\s+/g, '-');
+  const revealRef = useReveal<HTMLElement>();
 
   return (
-    <div id={id} className="glass-card">
+    <section
+      id={sectionId}
+      ref={revealRef}
+      style={accentVars(accent)}
+      className="card reveal group scroll-mt-28"
+    >
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-left justify-between p-6"
+        type="button"
+        onClick={() => setIsExpanded((open) => !open)}
+        className="flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
         aria-expanded={isExpanded}
-        aria-controls={id}
+        aria-controls={`${sectionId}-panel`}
       >
-        <div className="flex items-center gap-4">
-          {icon && (
-            <div className="p-2 bg-purple-500/20 rounded-lg">
-              {icon}
-            </div>
-          )}
-          <h2 className="text-xl font-semibold">{title}</h2>
-        </div>
-        <span className="p-1 rounded-lg hover:bg-white/10 transition-colors">
-          {isExpanded ? (
-            <ChevronUp className="w-5 h-5" />
-          ) : (
-            <ChevronDown className="w-5 h-5" />
-          )}
+        <span className="flex min-w-0 items-center gap-4">
+          {icon && <span className="icon-badge">{icon}</span>}
+          <span className="min-w-0">
+            <h2 className="truncate text-lg font-bold sm:text-xl">{title}</h2>
+            {eyebrow && (
+              <span className="mt-0.5 block truncate text-sm text-[var(--text-3)]">
+                {eyebrow}
+              </span>
+            )}
+          </span>
+        </span>
+
+        <span className="flex flex-none items-center gap-2">
+          {action}
+          <span className="icon-btn">
+            <ChevronDown
+              className={`h-4 w-4 transition-transform duration-500 ${
+                isExpanded ? 'rotate-180' : ''
+              }`}
+            />
+          </span>
         </span>
       </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isExpanded ? 'max-h-[1200px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="p-6 pt-0">{children}</div>
+
+      <div id={`${sectionId}-panel`} className="collapsible" data-open={isExpanded}>
+        <div>
+          <div className="px-5 pb-6 sm:px-6">{children}</div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

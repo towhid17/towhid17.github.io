@@ -1,25 +1,70 @@
-// import { BookOpen } from 'lucide-react';
+import { Briefcase, GraduationCap, Sparkles } from 'lucide-react';
+
+const facts = [
+  {
+    icon: Briefcase,
+    label: 'Now',
+    value: 'Software Engineer, Therap BD Ltd.',
+    accent: '16 185 129',
+  },
+  {
+    icon: Sparkles,
+    label: 'Previously',
+    value: 'ML Engineer, AIEdgeInside',
+    accent: '245 158 11',
+  },
+  {
+    icon: GraduationCap,
+    label: 'Studied',
+    value: 'CSE at BUET',
+    accent: '59 130 246',
+  },
+] as const;
 
 export function BioCard() {
   return (
-    <div className="space-y-4">
-      <p className="text-secondary leading-relaxed text-lg">
-        I'm Towhid (he/him), a graduate from the <a className="inline-link" href="https://cse.buet.ac.bd/" target="_blank" rel="noopener noreferrer">Department of CSE, BUET</a>. I am currently working as a software engineer at Therap BD Ltd.,
-        and previously worked as a machine learning engineer at AIEdgeInside.
-        <br/><br/>
-        <a href="https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-        className="chip !px-5 !py-2.5 text-accent hover:!bg-purple-500 hover:!text-white font-semibold shadow-md">
-        📄 My CV
-      </a>
-        <br/><br/>  
-        My research interests lie in the fields of <strong>Distributed AI/ML Systems, Edge/Cloud Computing, and Network-Security with the intersection of Machine Learning. </strong> 
-        {/* <br/><br/>
-        Currently, I’m working with <a href="https://sites.google.com/site/abdullahadnan/home?authuser=0" target="_blank">Prof. Muhammad Abdullah Adnan</a> on Bangla sign language production. I have also worked with <a href="https://sites.google.com/site/tanzimahashem/" target="_blank">Prof. Tanzima Hashem</a> on Non-Invasive Dehydration Detection 
-        using deep-learning models on smartphone. This led to a first-authored paper accepted at UbiComp/IMWUT 2024.
-        <br/><br/>
-        My undergraduate thesis project was under <a href="https://sites.google.com/site/rezwanareazrimpi/" target="_blank">Dr. Rezwana Reaz</a> on optimizing IoT firewall deployment on a fog-cloud-based architecture. Our paper (first-authored) 
-        accepted at 2024 IEEE/ACM 17th International Conference on Utility and Cloud Computing (UCC) */}
+    <div className="space-y-6">
+      <p className="max-w-3xl text-base leading-relaxed text-[var(--text-2)] sm:text-lg">
+        I'm Towhid (he/him), a graduate of the{' '}
+        <a
+          className="link-accent"
+          href="https://cse.buet.ac.bd/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Department of CSE, BUET
+        </a>
+        . I currently work as a software engineer at Therap BD Ltd., and
+        previously worked as a machine learning engineer at AIEdgeInside. My
+        research sits at the intersection of{' '}
+        <strong className="font-semibold text-[var(--text-1)]">
+          distributed AI/ML systems, edge and cloud computing, and network
+          security
+        </strong>
+        .
       </p>
+
+      <div className="grid gap-3 sm:grid-cols-3">
+        {facts.map((fact) => (
+          <div
+            key={fact.label}
+            className="card-soft lift group/fact flex items-center gap-3 p-4"
+            style={{ '--accent': fact.accent } as React.CSSProperties}
+          >
+            <span className="icon-badge !h-9 !w-9 !rounded-xl transition-transform duration-500 group-hover/fact:scale-110">
+              <fact.icon className="h-4 w-4" />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-xs font-medium uppercase tracking-wide text-[var(--text-3)]">
+                {fact.label}
+              </span>
+              <span className="block text-sm font-semibold text-[var(--text-1)]">
+                {fact.value}
+              </span>
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

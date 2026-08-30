@@ -1,142 +1,63 @@
 @layer components {
-  /* .glass-card {
-    @apply bg-[var(--glass-bg)] backdrop-blur-lg border border-[var(--glass-border)]
-           shadow-lg rounded-2xl transition-all duration-300;
-  }
-
-  .glass-card:hover {
-    @apply border-white/15 shadow-xl;
-  } */
-
-  /* .glass-card {
-    @apply relative overflow-hidden bg-[var(--glass-bg)] backdrop-blur-lg 
-           border border-[var(--glass-border)] shadow-lg rounded-2xl 
-           transition-all duration-300;
-  }
-
-  .glass-card::before {
-    content: "";
-    @apply absolute top-0 left-0 h-full bg-[var(--glass-bg)] opacity-50 pointer-events-none;
-    width: 0%;
-    transition: width 0.7s ease-in-out;
-  }
-
-  .glass-card:hover::before {
-    width: 100%;
-  }
-
-  .glass-card:hover {
-    @apply border-white/15 shadow-xl;
-  } */
-
-  /* iOS-style Liquid Glass: translucent fill + top sheen, heavy blur with
-     color saturation, specular rim (inset highlights), soft deep shadow. */
+  /* Legacy class names, remapped onto the Aurora Depth system so
+     routes that were not rewritten (gallery, news page, PDF viewer)
+     stay visually consistent. */
   .glass-card {
-    @apply relative overflow-hidden transition-all duration-300;
-    border-radius: 28px;
-    background:
-      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 45%),
-      var(--lg-fill);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid var(--lg-border);
+    position: relative;
+    border-radius: 26px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
     box-shadow:
-      0 8px 32px var(--lg-shadow),
-      inset 0 1px 1px var(--lg-rim-top),
-      inset 0 -1px 1px var(--lg-rim-bottom);
-  }
-
-  /* Refraction hairline along the top edge */
-  .glass-card::before {
-    content: "";
-    @apply absolute pointer-events-none;
-    top: 0;
-    left: 8%;
-    right: 8%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--lg-rim-top), transparent);
+      inset 0 1px 0 0 var(--rim),
+      0 16px 40px -24px var(--shadow);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease, border-color 0.4s ease;
   }
 
   .glass-card:hover {
     box-shadow:
-      0 12px 40px var(--lg-shadow-strong),
-      inset 0 1px 1px var(--lg-rim-top),
-      inset 0 -1px 1px var(--lg-rim-bottom);
+      inset 0 1px 0 0 var(--rim),
+      0 30px 60px -28px var(--shadow-strong);
   }
 
   .glass-card-2 {
-    @apply relative transition-all duration-300;
-    border-radius: 22px;
-    background:
-      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 50%),
-      var(--lg-fill-2);
-    backdrop-filter: blur(16px) saturate(160%);
-    -webkit-backdrop-filter: blur(16px) saturate(160%);
-    border: 1px solid var(--lg-border);
-    box-shadow:
-      0 4px 16px var(--lg-shadow),
-      inset 0 1px 1px var(--lg-rim-top);
+    position: relative;
+    border-radius: 20px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    box-shadow: inset 0 1px 0 0 var(--rim);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease, border-color 0.4s ease;
   }
 
   .glass-card-2:hover {
     transform: translateY(-2px);
-    box-shadow:
-      0 10px 28px var(--lg-shadow-strong),
-      inset 0 1px 1px var(--lg-rim-top);
-    border-color: rgba(139, 92, 246, 0.4);
-  }
-
-  .nav-link {
-    @apply px-4 py-2 rounded-full transition-all duration-300;
-  }
-
-  .nav-link:hover {
-    background: rgba(139, 92, 246, 0.14);
-    color: var(--text-accent);
-    box-shadow: inset 0 1px 1px var(--lg-rim-top);
-  }
-
-  .inline-link {
-    color: var(--text-accent);
-    @apply font-medium underline decoration-transparent underline-offset-4 transition-colors;
-  }
-
-  .inline-link:hover {
-    text-decoration-color: currentColor;
-  }
-
-  .chip {
-    @apply px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-300;
-    background:
-      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 60%),
-      rgba(139, 92, 246, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-color: rgba(139, 92, 246, 0.3);
-    box-shadow: inset 0 1px 1px var(--lg-rim-top);
-    color: var(--text-primary);
-  }
-
-  .chip:hover {
-    background:
-      linear-gradient(180deg, var(--lg-sheen) 0%, transparent 60%),
-      rgba(139, 92, 246, 0.2);
-    transform: translateY(-1px);
+    border-color: rgb(var(--accent) / 0.4);
   }
 
   .expanded-card {
-    @apply fixed inset-4 z-50 overflow-hidden transition-all duration-300 ease-in-out;
+    position: fixed;
+    inset: 1rem;
+    z-index: 50;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
   }
 
   .text-primary {
-    color: var(--text-primary);
+    color: var(--text-1);
   }
 
   .text-secondary {
-    color: var(--text-secondary);
+    color: var(--text-2);
+  }
+
+  .text-tertiary {
+    color: var(--text-3);
   }
 
   .text-accent {
-    color: var(--text-accent);
+    color: rgb(var(--accent));
   }
 }

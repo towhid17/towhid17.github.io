@@ -5,15 +5,22 @@ import { academicProjects } from '../../data/data';
 
 export function AcademicProjectsSection() {
   return (
-    <Section 
-      icon={<Flask className="w-6 h-6 text-primary" />} 
-      title="Academic Projects" 
+    <Section
+      id="projects"
+      icon={<Flask className="h-5 w-5" />}
+      title="Academic Projects"
+      eyebrow={`${academicProjects.length} projects`}
+      accent="indigo"
       defaultExpanded
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {academicProjects.map((proj) => (
-                      <AcademicProjectCard key={proj.id} academicProject={proj} />
-                    ))}
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {academicProjects.map((project, index) => (
+          <AcademicProjectCard
+            key={project.id}
+            academicProject={project}
+            index={index}
+          />
+        ))}
       </div>
     </Section>
   );
