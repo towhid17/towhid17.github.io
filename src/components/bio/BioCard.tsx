@@ -1,4 +1,5 @@
 import { Briefcase, GraduationCap, Sparkles } from 'lucide-react';
+import { useTilt } from '../../hooks/useTilt';
 
 const facts = [
   {
@@ -6,20 +7,55 @@ const facts = [
     label: 'Now',
     value: 'PhD Student, UC Santa Barbara',
     accent: '124 58 237',
+    accent2: '217 70 239',
   },
   {
     icon: Briefcase,
     label: 'Research',
     value: 'PhD Researcher, RACELab',
     accent: '6 182 212',
+    accent2: '59 130 246',
   },
   {
     icon: Sparkles,
     label: 'Focus',
     value: 'Distributed systems, IoT & AI',
     accent: '245 158 11',
+    accent2: '244 63 94',
   },
 ] as const;
+
+type Fact = (typeof facts)[number];
+
+function FactCard({ fact }: { fact: Fact }) {
+  const tiltRef = useTilt<HTMLDivElement>(8);
+  const Icon = fact.icon;
+
+  return (
+    <div
+      ref={tiltRef}
+      className="card-soft tilt sheen rim-glow group/fact flex items-center gap-3 p-4"
+      style={
+        {
+          '--accent': fact.accent,
+          '--accent-2': fact.accent2,
+        } as React.CSSProperties
+      }
+    >
+      <span className="icon-badge !h-9 !w-9 !rounded-xl transition-transform duration-500 group-hover/fact:-rotate-6 group-hover/fact:scale-110">
+        <Icon className="h-4 w-4" />
+      </span>
+      <span className="min-w-0">
+        <span className="block text-xs font-medium uppercase tracking-wide text-[var(--text-3)]">
+          {fact.label}
+        </span>
+        <span className="block text-sm font-semibold text-[var(--text-1)]">
+          {fact.value}
+        </span>
+      </span>
+    </div>
+  );
+}
 
 export function BioCard() {
   return (
@@ -53,23 +89,7 @@ export function BioCard() {
 
       <div className="grid gap-3 sm:grid-cols-3">
         {facts.map((fact) => (
-          <div
-            key={fact.label}
-            className="card-soft lift group/fact flex items-center gap-3 p-4"
-            style={{ '--accent': fact.accent } as React.CSSProperties}
-          >
-            <span className="icon-badge !h-9 !w-9 !rounded-xl transition-transform duration-500 group-hover/fact:scale-110">
-              <fact.icon className="h-4 w-4" />
-            </span>
-            <span className="min-w-0">
-              <span className="block text-xs font-medium uppercase tracking-wide text-[var(--text-3)]">
-                {fact.label}
-              </span>
-              <span className="block text-sm font-semibold text-[var(--text-1)]">
-                {fact.value}
-              </span>
-            </span>
-          </div>
+          <FactCard key={fact.label} fact={fact} />
         ))}
       </div>
     </div>

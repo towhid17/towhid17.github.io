@@ -1,6 +1,7 @@
 import { FileText } from 'lucide-react';
 import { CustomDoiIcon } from '../icons/doi';
 import { type Publication } from '../../data/types';
+import { useTilt } from '../../hooks/useTilt';
 
 interface PublicationEntryProps {
   publication: Publication;
@@ -10,9 +11,13 @@ interface PublicationEntryProps {
 export function PublicationEntry({ publication, index }: PublicationEntryProps) {
   const { title, year, venue, authors, pdfUrl, paperUrl } = publication;
   const hasPdf = Boolean(pdfUrl && pdfUrl !== '#');
+  const tiltRef = useTilt<HTMLElement>(7);
 
   return (
-    <article className="card-soft group flex gap-4 p-5 transition-transform duration-500 hover:-translate-y-1 sm:gap-5">
+    <article
+      ref={tiltRef}
+      className="card-soft tilt sheen rim-glow group flex gap-4 p-5 sm:gap-5"
+    >
       <span className="pub-index flex-none pt-0.5" aria-hidden="true">
         {String(index + 1).padStart(2, '0')}
       </span>

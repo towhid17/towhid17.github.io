@@ -2,6 +2,7 @@ import { FileText, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react
 import { HeroBackdrop } from './HeroBackdrop';
 import { Avatar } from './Avatar';
 import { academicProjects, publications } from '../../data/data';
+import { useTilt } from '../../hooks/useTilt';
 
 const CV_URL =
   'https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing';
@@ -24,9 +25,12 @@ const accentTriplets: Record<string, string> = {
 };
 
 export function Hero() {
+  // max=0 tracks the pointer for the sheen without rotating the hero or portrait.
+  const glowRef = useTilt<HTMLDivElement>(0);
+
   return (
     <header className="relative">
-      <div className="card sheen relative overflow-hidden">
+      <div ref={glowRef} className="card sheen rim-glow relative overflow-hidden">
         <HeroBackdrop />
 
         <div className="relative z-10 grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-14">

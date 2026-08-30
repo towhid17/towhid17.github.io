@@ -63,8 +63,7 @@ export function Footer() {
             <div className="divider w-full max-w-xs" />
 
             <p className="text-xs text-[var(--text-3)]">
-              © {new Date().getFullYear()} Towhidul Islam · Built with React,
-              Vite &amp; Tailwind
+              © {new Date().getFullYear()} Towhidul Islam
             </p>
           </div>
         </div>
