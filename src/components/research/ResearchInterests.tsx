@@ -18,25 +18,25 @@ const interests = [
   },
   {
     icon: ShieldCheck,
-    title: 'Network Security',
-    blurb: 'Firewall enforcement under delay constraints.',
+    title: 'Reinforcement Learning',
+    blurb: 'Learning to optimize for long-term rewards.',
     accent: '244 63 94',
     accent2: '217 70 239',
   },
-  {
-    icon: BrainCircuit,
-    title: 'Machine Learning',
-    blurb: 'Deep learning for systems and signal problems.',
-    accent: '245 158 11',
-    accent2: '244 63 94',
-  },
-  {
-    icon: HeartPulse,
-    title: 'Ubiquitous Computing & Digital Health',
-    blurb: 'Sensing health signals from everyday devices.',
-    accent: '16 185 129',
-    accent2: '6 182 212',
-  },
+  // {
+  //   icon: BrainCircuit,
+  //   title: 'Machine Learning',
+  //   blurb: 'Deep learning for systems and signal problems.',
+  //   accent: '245 158 11',
+  //   accent2: '244 63 94',
+  // },
+  // {
+  //   icon: HeartPulse,
+  //   title: 'Ubiquitous Computing & Digital Health',
+  //   blurb: 'Sensing health signals from everyday devices.',
+  //   accent: '16 185 129',
+  //   accent2: '6 182 212',
+  // },
 ] as const;
 
 type Interest = (typeof interests)[number];

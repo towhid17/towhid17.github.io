@@ -48,7 +48,7 @@ export function EducationSection() {
                 University of California, Santa Barbara (UCSB) · California, USA
               </p>
               <p className="mt-1 text-sm font-medium text-[rgb(var(--accent))]">
-                First-year PhD student · Sep 2025 – Present
+                PhD student · Sep 2025 – Present
               </p>
             </div>
           </div>

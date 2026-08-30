@@ -1,28 +1,11 @@
 import { FileText, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { HeroBackdrop } from './HeroBackdrop';
 import { Avatar } from './Avatar';
-import { academicProjects, publications } from '../../data/data';
 import { useTilt } from '../../hooks/useTilt';
 
 const CV_URL =
   'https://drive.google.com/file/d/15F8HXNFatHYtv_3mXzWnAKS58jDBpYPy/view?usp=sharing';
 const CAREER_START_YEAR = 2023;
-
-const stats = [
-  { label: 'Publications', value: publications.length, accent: 'fuchsia' },
-  { label: 'Projects', value: academicProjects.length, accent: 'cyan' },
-  {
-    label: 'Years building',
-    value: Math.max(1, new Date().getFullYear() - CAREER_START_YEAR),
-    accent: 'amber',
-  },
-] as const;
-
-const accentTriplets: Record<string, string> = {
-  fuchsia: '217 70 239',
-  cyan: '6 182 212',
-  amber: '245 158 11',
-};
 
 export function Hero() {
   // max=0 tracks the pointer for the sheen without rotating the hero or portrait.
@@ -38,7 +21,7 @@ export function Hero() {
           <div className="order-2 text-center lg:order-1 lg:text-left">
             <span className="chip mb-5 !border-white/25 !bg-white/10 text-white backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
-              First-year PhD Student at UCSB
+              PhD Student at UCSB
             </span>
 
             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
@@ -50,7 +33,7 @@ export function Hero() {
             </p>
 
             <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-white/70 lg:mx-0">
-              Building adaptive scheduling and spatial data-placement methods
+              Building adaptive application deployment and spatial data-placement methods
               for distributed IoT and edge environments.
             </p>
 
@@ -72,27 +55,6 @@ export function Hero() {
                 <Mail className="h-4 w-4" />
                 Get in touch
               </a>
-
-              <div className="flex items-center gap-2">
-                <a
-                  href="https://github.com/towhid17"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-btn !border-white/25 !bg-white/10 !text-white backdrop-blur"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/towhidul-islam--/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-btn !border-white/25 !bg-white/10 !text-white backdrop-blur"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-              </div>
             </div>
 
             <p className="mt-6 flex items-center justify-center gap-2 text-sm text-white/60 lg:justify-start">
@@ -109,16 +71,38 @@ export function Hero() {
 
         {/* ---- Stats rail ---- */}
         <div className="relative z-10 grid grid-cols-3 border-t border-white/15 bg-black/25 backdrop-blur-xl">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="stat-tile group/stat"
-              style={{ '--accent': accentTriplets[stat.accent] } as React.CSSProperties}
+          <div className="stat-tile group/stat" style={{ '--accent': '217 70 239' } as React.CSSProperties}>
+            <a
+              href="https://github.com/towhid17"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn !border-white/25 !bg-white/10 !text-white backdrop-blur"
+              aria-label="GitHub"
             >
-              <span className="stat-value">{stat.value}</span>
-              <span className="stat-label">{stat.label}</span>
-            </div>
-          ))}
+              <Github className="h-4 w-4" />
+            </a>
+            <span className="stat-label">GitHub</span>
+          </div>
+
+          <div className="stat-tile group/stat" style={{ '--accent': '6 182 212' } as React.CSSProperties}>
+            <a
+              href="https://www.linkedin.com/in/towhidul-islam--/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn !border-white/25 !bg-white/10 !text-white backdrop-blur"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <span className="stat-label">LinkedIn</span>
+          </div>
+
+          <div className="stat-tile group/stat" style={{ '--accent': '245 158 11' } as React.CSSProperties}>
+            <span className="stat-value">
+              {Math.max(1, new Date().getFullYear() - CAREER_START_YEAR)}
+            </span>
+            <span className="stat-label">Years building</span>
+          </div>
         </div>
       </div>
     </header>

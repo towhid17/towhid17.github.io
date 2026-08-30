@@ -70,7 +70,7 @@ export function BioCard() {
         >
           Department of CSE, BUET
         </a>
-        . I am now a first-year Computer Science PhD student at the{' '}
+        . I am now a Computer Science PhD student at the{' '}
         <a
           className="link-accent"
           href="https://www.cs.ucsb.edu/"
