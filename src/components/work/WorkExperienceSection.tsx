@@ -44,7 +44,7 @@ export function WorkExperienceSection() {
         <WorkExperienceCard
           title="Software Engineer"
           company="Therap BD Ltd."
-          period="July 2023 – Aug 31, 2025"
+          period="Jun 2023 – Aug 2025"
           accent="16 185 129"
           accent2="6 182 212"
           logo={
@@ -54,14 +54,14 @@ export function WorkExperienceSection() {
               className="h-full w-full object-cover"
             />
           }
-          description="Therap serves people with disabilities across the USA and Canada. I build features with the Spring Framework, Oracle Cloud Infrastructure, JSP, Oracle DB, and React."
+          description="Therap serves people with disabilities across the USA and Canada. I built features with the Spring Framework, Oracle Cloud Infrastructure, JSP, Oracle DB, and React."
           technologies={['Spring', 'Oracle DB', 'Oracle Cloud Infrastructure', 'React']}
         />
 
         <WorkExperienceCard
           title="Machine Learning Engineer"
           company="AIEdgeInside"
-          period="May 2023 – November 2023"
+          period="May 2023 – Sept 2023"
           accent="245 158 11"
           accent2="244 63 94"
           logo={<Cpu className="h-5 w-5" />}
